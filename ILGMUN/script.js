@@ -110,3 +110,4 @@ function setupModal(modalId, openSelector, closeSelector) {
 
 setupModal('ilgmun1-modal', '[data-open-ilgmun1]', '[data-close-ilgmun1]');
 setupModal('ilgmun2-modal', '[data-open-ilgmun2]', '[data-close-ilgmun2]');
+setupModal('ilgmun3-modal', '[data-open-ilgmun3]', '[data-close-ilgmun3]');
