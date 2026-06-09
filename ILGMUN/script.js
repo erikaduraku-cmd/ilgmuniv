@@ -111,3 +111,41 @@ function setupModal(modalId, openSelector, closeSelector) {
 setupModal('ilgmun1-modal', '[data-open-ilgmun1]', '[data-close-ilgmun1]');
 setupModal('ilgmun2-modal', '[data-open-ilgmun2]', '[data-close-ilgmun2]');
 setupModal('ilgmun3-modal', '[data-open-ilgmun3]', '[data-close-ilgmun3]');
+
+const resourceModal = document.getElementById('resource-modal');
+const resourceTitle = document.getElementById('resource-title');
+const resourceFrame = document.getElementById('resource-frame');
+const resourceDownload = document.getElementById('resource-download');
+const resourceOpen = document.getElementById('resource-open');
+
+function closeResourceModal() {
+  if (!resourceModal) return;
+  resourceModal.classList.remove('open');
+  resourceModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-lock');
+  if (resourceFrame) resourceFrame.removeAttribute('src');
+}
+
+document.querySelectorAll('[data-open-resource]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const title = button.dataset.resourceTitle;
+    const file = button.dataset.resourceFile;
+    if (!resourceModal || !title || !file) return;
+
+    if (resourceTitle) resourceTitle.textContent = title;
+    if (resourceFrame) resourceFrame.src = file;
+    if (resourceDownload) resourceDownload.href = file;
+    if (resourceOpen) resourceOpen.href = file;
+    resourceModal.classList.add('open');
+    resourceModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-lock');
+  });
+});
+
+document.querySelectorAll('[data-close-resource]').forEach((button) => {
+  button.addEventListener('click', closeResourceModal);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeResourceModal();
+});

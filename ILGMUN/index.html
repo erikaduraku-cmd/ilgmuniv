@@ -24,9 +24,9 @@
 <div class="dropdown" data-nav-item>
 <button>Resources ▾</button>
 <div class="dropdown-menu">
-<a href="resources/ILG-MUN-IV-Delegate-Handbook-2026.pdf" download>Delegate Handbook</a>
-<a href="resources/ILG-MUN-IV-THIMUN-Rules-of-Procedure.pdf" download>Rules of Procedure</a>
-<a href="resources/ILG-MUN-IV-Code-of-Conduct.pdf" download>Code of Conduct</a>
+<button type="button" data-open-resource data-resource-title="Delegate Handbook" data-resource-file="resources/ILG-MUN-IV-Delegate-Handbook-2026.pdf">Delegate Handbook</button>
+<button type="button" data-open-resource data-resource-title="Rules of Procedure" data-resource-file="resources/ILG-MUN-IV-THIMUN-Rules-of-Procedure.pdf">Rules of Procedure</button>
+<button type="button" data-open-resource data-resource-title="Code of Conduct" data-resource-file="resources/ILG-MUN-IV-Code-of-Conduct.pdf">Code of Conduct</button>
 </div>
 </div>
 <a data-nav-item href="#team">ILG Team</a>
@@ -34,6 +34,10 @@
 <span class="nav-cursor" aria-hidden="true"></span>
 </nav>
 </header>
+<div class="quick-actions" aria-label="Conference forms">
+<a class="quick-action primary" href="https://docs.google.com/forms/d/1g7cj5C3Y-zk0400ECGWr6-GA2PzdrEHY4TiJ2MVFi8g/edit" rel="noopener" target="_blank">Delegate Registration</a>
+<a class="quick-action" href="https://docs.google.com/forms/d/e/1FAIpQLScXI_SUIAiOCUPMAsejjxX6oBr980o_57SCKLpFMKxbp2dEDQ/viewform?usp=header" rel="noopener" target="_blank">Co-Chair Applications</a>
+</div>
 <main>
 <section class="page active home-page" id="home">
 <section class="hero" style="background-image:url('assets/cover-un-hall.jpeg')">
@@ -150,7 +154,7 @@
 </section>
 </section>
 <section class="page" id="committees">
-<div class="page-title"><h1>Committees</h1><p>Click a committee to view its topics and chair information.</p></div>
+<div class="page-title"><h1>Committees</h1><p>Choose a committee level to view its topics and chair introductions.</p></div>
 <div class="committee-grid"><a class="committee-card" href="#unhrc"><h2>Junior Grades 6–8</h2><p>UNHRC</p></a><a class="committee-card" href="#ecosoc"><h2>Beginner</h2><p>ECOSOC</p></a><a class="committee-card" href="#unodc"><h2>Intermediate</h2><p>UNODC</p></a><a class="committee-card" href="#security-council"><h2>Advanced</h2><p>Security Council</p></a></div>
 </section>
 <section class="page committee-page" id="unhrc"><h1>UNHRC</h1><p><strong>Chair:</strong> Yana Blagoeva Petrova</p><h2>Topics</h2><p>Protecting Children in Armed Conflict Zones</p><p>Addressing Human Rights Violations in Territories Under Military Occupation</p><div class="chair-intro card">
@@ -184,11 +188,11 @@
 <p>Hope to see you all in November!</p>
 </div></section>
 <section class="page resource-page" id="resources">
-<div class="page-title"><h1>Resources</h1><p>Download the official ILG MUN IV delegate materials.</p></div>
+<div class="page-title"><h1>Resources</h1><p>Preview the official ILG MUN IV delegate materials, then download the PDF.</p></div>
 <div class="resource-grid">
-<a class="resource-card" href="resources/ILG-MUN-IV-Delegate-Handbook-2026.pdf" download><h2>Delegate Handbook</h2><p>Conference guide, MUN basics, debate flow, resolution writing, and glossary.</p></a>
-<a class="resource-card" href="resources/ILG-MUN-IV-THIMUN-Rules-of-Procedure.pdf" download><h2>Rules of Procedure</h2><p>THIMUN procedure, motions, POIs, amendments, voting, and debate structure.</p></a>
-<a class="resource-card" href="resources/ILG-MUN-IV-Code-of-Conduct.pdf" download><h2>Code of Conduct</h2><p>Conference expectations, conduct, attire, media permission, and safety policies.</p></a>
+<button class="resource-card" type="button" data-open-resource data-resource-title="Delegate Handbook" data-resource-file="resources/ILG-MUN-IV-Delegate-Handbook-2026.pdf"><h2>Delegate Handbook</h2><p>Conference guide, MUN basics, debate flow, resolution writing, and glossary.</p></button>
+<button class="resource-card" type="button" data-open-resource data-resource-title="Rules of Procedure" data-resource-file="resources/ILG-MUN-IV-THIMUN-Rules-of-Procedure.pdf"><h2>Rules of Procedure</h2><p>THIMUN procedure, motions, POIs, amendments, voting, and debate structure.</p></button>
+<button class="resource-card" type="button" data-open-resource data-resource-title="Code of Conduct" data-resource-file="resources/ILG-MUN-IV-Code-of-Conduct.pdf"><h2>Code of Conduct</h2><p>Conference expectations, conduct, attire, media permission, and safety policies.</p></button>
 </div>
 </section>
 <section class="page" id="team">
@@ -231,11 +235,11 @@
 </div>
 <div class="contact-info-card">
 <span>Instagram</span>
-<p>@ilgmun</p>
+<a href="https://www.instagram.com/ilgmun" rel="noopener" target="_blank">@ilgmun</a>
 </div>
 <div class="contact-info-card">
 <span>TikTok</span>
-<p>@ilgmun</p>
+<a href="https://www.tiktok.com/@ilgmun" rel="noopener" target="_blank">@ilgmun</a>
 </div>
 </div>
 </section>
@@ -292,6 +296,22 @@
 </div>
 </div>
 </div>
+
+<div class="photo-modal resource-modal" id="resource-modal" aria-hidden="true" role="dialog" aria-label="Resource preview">
+<div class="photo-modal-backdrop" data-close-resource></div>
+<div class="photo-modal-panel resource-modal-panel">
+<button class="modal-close" type="button" data-close-resource aria-label="Close resource preview">×</button>
+<div class="modal-copy">
+<p class="eyebrow">Official Resource</p>
+<h2 id="resource-title">Resource</h2>
+</div>
+<iframe id="resource-frame" title="Resource preview"></iframe>
+<div class="resource-actions">
+<a class="btn primary dark" id="resource-download" href="#" download>Download PDF</a>
+<a class="btn dark-outline" id="resource-open" href="#" rel="noopener" target="_blank">Open in New Tab</a>
+</div>
+</div>
+</div>
 </main>
 <footer>
 <div class="footer-grid">
@@ -302,14 +322,15 @@
 </div>
 <div>
 <h3>Contact Us</h3>
-<p>arisa.citaku@ilg-ks.org</p>
-<p>info@ilg-ks.org</p>
-<p>kean.kehoe@ilg-ks.org</p>
+<p><a href="mailto:arisa.citaku@ilg-ks.org">arisa.citaku@ilg-ks.org</a></p>
+<p><a href="mailto:info@ilg-ks.org">info@ilg-ks.org</a></p>
+<p><a href="mailto:kean.kehoe@ilg-ks.org">kean.kehoe@ilg-ks.org</a></p>
 </div>
 <div>
 <h3>Socials</h3>
-<p>Instagram: @ilgmun</p>
-<p>TikTok: @ilgmun</p>
+<p><a href="https://www.instagram.com/ilgmun" rel="noopener" target="_blank">Instagram: @ilgmun</a></p>
+<p><a href="https://www.tiktok.com/@ilgmun" rel="noopener" target="_blank">TikTok: @ilgmun</a></p>
+<p><a href="#home">Back to top</a></p>
 </div>
 </div>
 </footer>
