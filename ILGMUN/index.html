@@ -20,13 +20,22 @@
 <nav id="site-nav" class="nav-pill">
 <a data-nav-item href="#home">Home</a>
 <a data-nav-item href="#about">About</a>
-<a data-nav-item href="#committees">Committees</a>
+<div class="dropdown" data-nav-item>
+<button>Committees ▾</button>
+<div class="dropdown-menu">
+<a href="#unhrc">UNHRC</a>
+<a href="#ecosoc">ECOSOC</a>
+<a href="#unodc">UNODC</a>
+<a href="#security-council">Security Council</a>
+</div>
+</div>
 <div class="dropdown" data-nav-item>
 <button>Resources ▾</button>
 <div class="dropdown-menu">
 <button type="button" data-open-resource data-resource-title="Delegate Handbook" data-resource-file="/resources/ILG-MUN-IV-Delegate-Handbook-2026.pdf">Delegate Handbook</button>
 <button type="button" data-open-resource data-resource-title="Rules of Procedure" data-resource-file="/resources/ILG-MUN-IV-THIMUN-Rules-of-Procedure.pdf">Rules of Procedure</button>
 <button type="button" data-open-resource data-resource-title="Code of Conduct" data-resource-file="/resources/ILG-MUN-IV-Code-of-Conduct.pdf">Code of Conduct</button>
+<button type="button" data-open-resource data-resource-title="Schedule Overview" data-resource-file="/resources/ILG-MUN-IV-Schedule.png">Schedule</button>
 </div>
 </div>
 <a data-nav-item href="#team">ILG Team</a>
@@ -53,7 +62,7 @@
 <div class="card announcements">
 <h2>Announcements</h2>
 <p><strong>Co-Chair Applications:</strong> Applications are currently available.</p>
-<p><strong>Resources:</strong> Delegate materials will be uploaded soon.</p>
+<p><strong>Schedule:</strong> The conference schedule overview is now available.</p>
 <p><strong>Guest Speaker:</strong> To be announced.</p>
 </div>
 <div class="card countdown-card">
@@ -70,7 +79,7 @@
 <section class="welcome-block">
 <div>
 <h1>Welcome to ILG MUN IV!</h1>
-<div class="theme-pill"><span>This year’s theme:</span> Navigating Conflict in a Changing World Through Security, Sovereignty, and Cooperation.</div>
+<div class="theme-pill"><span>This year’s theme</span><strong>“Navigating Conflict in a Changing World Through Security, Sovereignty, and Cooperation.”</strong></div>
 <p>ILG MUN IV brings together students from different schools and backgrounds for a few days of debate, collaboration, and discussion on some of the most important global issues of today.</p>
 </div>
 </section>
@@ -226,6 +235,7 @@
 <button class="resource-card" type="button" data-open-resource data-resource-title="Delegate Handbook" data-resource-file="/resources/ILG-MUN-IV-Delegate-Handbook-2026.pdf"><h2>Delegate Handbook</h2><p>Conference guide, MUN basics, debate flow, resolution writing, and glossary.</p></button>
 <button class="resource-card" type="button" data-open-resource data-resource-title="Rules of Procedure" data-resource-file="/resources/ILG-MUN-IV-THIMUN-Rules-of-Procedure.pdf"><h2>Rules of Procedure</h2><p>THIMUN procedure, motions, POIs, amendments, voting, and debate structure.</p></button>
 <button class="resource-card" type="button" data-open-resource data-resource-title="Code of Conduct" data-resource-file="/resources/ILG-MUN-IV-Code-of-Conduct.pdf"><h2>Code of Conduct</h2><p>Conference expectations, conduct, attire, media permission, and safety policies.</p></button>
+<button class="resource-card" type="button" data-open-resource data-resource-title="Schedule Overview" data-resource-file="/resources/ILG-MUN-IV-Schedule.png"><h2>Schedule</h2><p>Three-day overview for arrival, opening ceremony, committee sessions, breaks, FUNMUN, and closing awards.</p></button>
 </div>
 </section>
 <section class="page" id="team">
@@ -340,7 +350,7 @@
 </div>
 <iframe id="resource-frame" title="Resource preview"></iframe>
 <div class="resource-actions">
-<a class="btn primary dark" id="resource-download" href="#" download>Download PDF</a>
+<a class="btn primary dark" id="resource-download" href="#" download>Download File</a>
 <a class="btn dark-outline" id="resource-open" href="#" rel="noopener" target="_blank">Open in New Tab</a>
 </div>
 </div>
