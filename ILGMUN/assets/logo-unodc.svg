@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="UNODC logo">
+  <rect width="320" height="240" rx="8" fill="#fff"/>
+  <g fill="none" stroke="#12a9df" stroke-width="7">
+    <circle cx="160" cy="82" r="50"/>
+    <ellipse cx="160" cy="82" rx="22" ry="50"/>
+    <path d="M110 82h100M160 32v100M126 48c20 12 48 12 68 0M126 116c20-12 48-12 68 0"/>
+  </g>
+  <g fill="none" stroke="#12a9df" stroke-width="7" stroke-linecap="round">
+    <path d="M91 128c-30-24-40-63-23-99"/>
+    <path d="M229 128c30-24 40-63 23-99"/>
+    <path d="M87 132c32 9 60 5 73-6"/>
+    <path d="M233 132c-32 9-60 5-73-6"/>
+  </g>
+  <text x="160" y="214" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="800" fill="#12a9df">UNODC</text>
+</svg>

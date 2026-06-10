@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="UNHRC logo">
+  <rect width="320" height="240" rx="8" fill="#fff"/>
+  <g fill="none" stroke="#1479bf" stroke-width="8" stroke-linecap="round">
+    <path d="M90 126c-18-36-6-76 28-96"/>
+    <path d="M230 126c18-36 6-76-28-96"/>
+    <path d="M112 148c-20-12-38-32-50-56"/>
+    <path d="M208 148c20-12 38-32 50-56"/>
+  </g>
+  <path d="M160 34c-18 34-35 55-54 78 28-6 50-22 68-52-4 34-17 58-38 80 35-10 65-40 75-94 10 40 1 75-25 104 34-10 58-38 68-78" fill="#1479bf"/>
+  <text x="160" y="210" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="800" letter-spacing="10" fill="#2f78b7">UNHRC</text>
+</svg>
