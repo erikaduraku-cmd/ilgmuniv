@@ -22,6 +22,12 @@ function showPage() {
 window.addEventListener('hashchange', showPage);
 showPage();
 
+document.querySelectorAll('[data-page-top]').forEach((button) => {
+  button.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
 if (nav && navCursor) {
   const moveCursor = (item) => {
     const { width } = item.getBoundingClientRect();
