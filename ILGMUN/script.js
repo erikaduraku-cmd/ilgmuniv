@@ -28,6 +28,24 @@ document.querySelectorAll('[data-page-top]').forEach((button) => {
   });
 });
 
+const pageTopButton = document.querySelector('[data-page-top]');
+if (pageTopButton) {
+  let lastScrollY = window.scrollY;
+  let arrowSettleTimer;
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    const shift = currentScrollY > lastScrollY ? 12 : -12;
+    pageTopButton.style.setProperty('--arrow-shift', `${shift}px`);
+    lastScrollY = currentScrollY;
+
+    window.clearTimeout(arrowSettleTimer);
+    arrowSettleTimer = window.setTimeout(() => {
+      pageTopButton.style.setProperty('--arrow-shift', '0px');
+    }, 180);
+  }, { passive: true });
+}
+
 if (nav && navCursor) {
   const moveCursor = (item) => {
     const { width } = item.getBoundingClientRect();

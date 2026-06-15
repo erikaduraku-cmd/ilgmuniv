@@ -941,11 +941,13 @@ footer a:hover,
   background: rgba(255, 255, 255, .94);
   box-shadow: 0 16px 36px rgba(7, 63, 60, .2);
   cursor: pointer;
+  transform: translateY(var(--arrow-shift, 0px));
   transition: transform .16s ease, box-shadow .16s ease;
+  will-change: transform;
 }
 
 .back-to-top-button:hover {
-  transform: translateY(-3px);
+  transform: translateY(calc(var(--arrow-shift, 0px) - 3px));
   box-shadow: 0 20px 42px rgba(7, 63, 60, .24);
 }
 
