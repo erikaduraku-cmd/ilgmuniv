@@ -1103,6 +1103,30 @@ body.modal-lock {
   background: var(--mist);
 }
 
+.resource-image-preview {
+  display: grid;
+  place-items: center;
+  min-height: min(68vh, 720px);
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--mist);
+}
+
+.resource-image-preview[hidden] {
+  display: none;
+}
+
+.resource-image-preview img {
+  max-width: min(100%, 560px);
+  max-height: min(68vh, 720px);
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  box-shadow: 0 18px 42px rgba(7, 63, 60, .14);
+}
+
 .resource-actions {
   display: flex;
   flex-wrap: wrap;

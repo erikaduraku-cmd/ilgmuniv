@@ -139,8 +139,11 @@ setupModal('ilgmun3-modal', '[data-open-ilgmun3]', '[data-close-ilgmun3]');
 const resourceModal = document.getElementById('resource-modal');
 const resourceTitle = document.getElementById('resource-title');
 const resourceFrame = document.getElementById('resource-frame');
+const resourceImagePreview = document.getElementById('resource-image-preview');
+const resourceImage = document.getElementById('resource-image');
 const resourceDownload = document.getElementById('resource-download');
 const resourceOpen = document.getElementById('resource-open');
+const imageResourcePattern = /\.(png|jpe?g|webp|gif|svg)$/i;
 
 function closeResourceModal() {
   if (!resourceModal) return;
@@ -148,6 +151,9 @@ function closeResourceModal() {
   resourceModal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('modal-lock');
   if (resourceFrame) resourceFrame.removeAttribute('src');
+  if (resourceImage) resourceImage.removeAttribute('src');
+  if (resourceImagePreview) resourceImagePreview.hidden = true;
+  if (resourceFrame) resourceFrame.hidden = false;
 }
 
 document.querySelectorAll('[data-open-resource]').forEach((button) => {
@@ -157,7 +163,24 @@ document.querySelectorAll('[data-open-resource]').forEach((button) => {
     if (!resourceModal || !title || !file) return;
 
     if (resourceTitle) resourceTitle.textContent = title;
-    if (resourceFrame) resourceFrame.src = file;
+    if (imageResourcePattern.test(file)) {
+      if (resourceFrame) {
+        resourceFrame.hidden = true;
+        resourceFrame.removeAttribute('src');
+      }
+      if (resourceImage) {
+        resourceImage.src = file;
+        resourceImage.alt = title;
+      }
+      if (resourceImagePreview) resourceImagePreview.hidden = false;
+    } else {
+      if (resourceImage) resourceImage.removeAttribute('src');
+      if (resourceImagePreview) resourceImagePreview.hidden = true;
+      if (resourceFrame) {
+        resourceFrame.hidden = false;
+        resourceFrame.src = file;
+      }
+    }
     if (resourceDownload) resourceDownload.href = file;
     if (resourceOpen) resourceOpen.href = file;
     resourceModal.classList.add('open');
