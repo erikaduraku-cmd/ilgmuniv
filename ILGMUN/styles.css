@@ -475,7 +475,7 @@ main {
 }
 
 #about > .card {
-  max-width: 1020px;
+  max-width: 1160px;
   margin: 0 auto 20px;
   border: 2px solid rgba(15, 143, 135, .48);
   border-radius: 6px;
@@ -961,7 +961,7 @@ main {
 }
 
 .contact-layout {
-  max-width: 1040px;
+  max-width: 1160px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
