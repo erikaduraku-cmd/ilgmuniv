@@ -842,6 +842,27 @@ main {
   transform: scale(1.35);
 }
 
+.report-card-coming-soon {
+  border-style: dashed;
+  background: rgba(239, 249, 247, .78);
+  cursor: default;
+}
+
+.report-card-coming-soon:hover {
+  transform: none;
+  border-color: rgba(15, 143, 135, .18);
+  box-shadow: 0 10px 24px rgba(7, 63, 60, .08);
+}
+
+.report-card-coming-soon:hover::after {
+  transform: none;
+}
+
+.report-card-coming-soon .report-format,
+.report-card-coming-soon .report-action {
+  color: var(--muted);
+}
+
 .report-card-top {
   display: flex;
   width: 100%;
