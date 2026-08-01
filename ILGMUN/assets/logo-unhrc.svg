@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="UNHRC logo">
-  <rect width="320" height="240" rx="8" fill="#fff"/>
   <g fill="none" stroke="#1479bf" stroke-width="8" stroke-linecap="round">
     <path d="M90 126c-18-36-6-76 28-96"/>
     <path d="M230 126c18-36 6-76-28-96"/>

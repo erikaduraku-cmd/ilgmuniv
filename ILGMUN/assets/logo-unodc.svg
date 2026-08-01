@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="UNODC logo">
-  <rect width="320" height="240" rx="8" fill="#fff"/>
   <g fill="none" stroke="#12a9df" stroke-width="7">
     <circle cx="160" cy="82" r="50"/>
     <ellipse cx="160" cy="82" rx="22" ry="50"/>

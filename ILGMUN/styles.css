@@ -28,9 +28,7 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background:
-    radial-gradient(circle at 8% 16%, rgba(198, 155, 72, .08), transparent 27%),
-    linear-gradient(180deg, #f7f3eb 0%, #f5f8f6 48%, #edf3f1 100%);
+  background: #f5f1e9;
   font-family: var(--serif);
   line-height: 1.65;
 }
@@ -59,7 +57,7 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 12px clamp(18px, 5vw, 72px);
-  background: linear-gradient(110deg, rgba(4, 37, 35, .97), rgba(7, 63, 60, .96) 58%, rgba(11, 105, 98, .94));
+  background: #0b403c;
   border-bottom: 1px solid rgba(115, 214, 201, .32);
   box-shadow: 0 10px 28px rgba(4, 32, 31, .18);
   backdrop-filter: blur(16px);
@@ -186,13 +184,6 @@ nav button:hover {
   text-align: left;
 }
 
-.dropdown-menu button::before {
-  content: "▱";
-  margin-right: 9px;
-  color: var(--teal);
-  font-size: 15px;
-}
-
 .dropdown-menu a:hover,
 .dropdown-menu button:hover {
   background: var(--mist);
@@ -206,7 +197,7 @@ main {
 .page,
 .home-page {
   display: none;
-  padding: 72px clamp(18px, 4vw, 64px);
+  padding: 44px clamp(18px, 4vw, 64px);
   scroll-margin-top: 82px;
 }
 
@@ -409,16 +400,16 @@ main {
 .welcome-block {
   max-width: 1280px;
   margin: 0 auto 36px;
-  padding: clamp(26px, 4vw, 48px);
+  padding: clamp(24px, 3vw, 34px);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: linear-gradient(135deg, #ffffff, var(--mist));
+  background: #fbf8f1;
 }
 
 .welcome-block h1 {
   margin: 0 0 12px;
   color: var(--teal-dark);
-  font-size: clamp(36px, 4.5vw, 58px);
+  font-size: clamp(30px, 3.2vw, 40px);
   line-height: 1.04;
 }
 
@@ -432,7 +423,8 @@ main {
 
 .welcome-block p {
   max-width: 980px;
-  font-size: 21px;
+  margin-bottom: 0;
+  font-size: 18px;
 }
 
 .theme-pill {
@@ -486,14 +478,12 @@ main {
 .page-title {
   max-width: 1180px;
   margin: 0 auto 34px;
-  padding: clamp(26px, 4vw, 46px);
+  padding: clamp(22px, 3vw, 32px);
   overflow: hidden;
-  border: 1px solid rgba(198, 155, 72, .28);
+  border: 0;
   border-radius: 12px;
-  background:
-    radial-gradient(circle at 88% 20%, rgba(103, 52, 81, .34), transparent 34%),
-    linear-gradient(125deg, var(--navy-deep) 0%, var(--navy) 64%, #254d67 100%);
-  box-shadow: 0 18px 42px rgba(16, 40, 63, .2);
+  background: #123f3b;
+  box-shadow: 0 12px 28px rgba(7, 63, 60, .14);
   text-align: center;
 }
 
@@ -501,7 +491,7 @@ main {
 .committee-page h1 {
   margin: 0 0 12px;
   color: var(--teal-dark);
-  font-size: clamp(42px, 5vw, 58px);
+  font-size: clamp(36px, 4vw, 50px);
   line-height: 1.06;
 }
 
@@ -519,10 +509,13 @@ main {
   width: 100%;
   padding-right: 0;
   padding-left: 0;
+  background: #f5f1e9;
+  padding-bottom: 0;
 }
 
 #about > .page-title {
   width: calc(100% - clamp(40px, 8vw, 128px));
+  margin-bottom: 24px;
 }
 
 .about-grid {
@@ -530,31 +523,26 @@ main {
   width: 100%;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0;
-  align-items: stretch;
+  align-items: start;
   overflow: hidden;
 }
 
 .about-card {
   min-width: 0;
-  min-height: 620px;
   margin: 0;
-  padding: clamp(42px, 6vw, 92px);
+  padding: clamp(32px, 4vw, 56px);
   border: 0;
   border-radius: 0;
   box-shadow: none;
 }
 
 .about-card:first-child {
-  background:
-    radial-gradient(circle at 8% 8%, rgba(198, 155, 72, .18), transparent 34%),
-    linear-gradient(145deg, #fffdf8 0%, var(--cream) 100%);
+  background: #f1e8da;
 }
 
 .about-card:last-child {
-  background:
-    radial-gradient(circle at 92% 12%, rgba(103, 52, 81, .28), transparent 32%),
-    linear-gradient(145deg, #254d67 0%, var(--navy-deep) 100%);
-  color: rgba(255, 255, 255, .9);
+  background: #e3eeeb;
+  color: var(--ink);
 }
 
 .about-card h2 {
@@ -578,11 +566,11 @@ main {
 }
 
 .about-card:last-child h2 {
-  color: #fff;
+  color: var(--teal-dark);
 }
 
 .about-card:last-child h2::after {
-  background: #d6ad61;
+  background: var(--teal);
 }
 
 .about-card p {
@@ -596,13 +584,21 @@ main {
   margin: 48px auto 0;
 }
 
+#about > .gallery {
+  width: 100%;
+  max-width: none;
+  margin-top: 0;
+  padding: 32px clamp(20px, 4vw, 64px) 36px;
+  background: #f5f1e9;
+}
+
 .conference-history-grid {
   display: grid;
   width: 100%;
-  padding: clamp(42px, 5vw, 76px) clamp(20px, 4vw, 64px);
+  padding: 32px clamp(20px, 4vw, 64px);
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(16px, 2vw, 28px);
-  background: linear-gradient(135deg, #efe6d7 0%, #f8f4ec 52%, #e8eff4 100%);
+  background: #f5f1e9;
 }
 
 .conference-history-grid .gallery {
@@ -637,9 +633,9 @@ main {
 
 .conference-history-grid .mun-memory-card {
   width: 100%;
-  height: 100%;
+  height: auto;
   grid-template-columns: 1fr;
-  grid-template-rows: 250px minmax(150px, auto);
+  grid-template-rows: 230px auto;
   border: 0;
   border-radius: 14px;
   background: #fffdf8;
@@ -664,7 +660,7 @@ main {
 }
 
 .conference-history-grid .mun-memory-card img {
-  height: 250px;
+  height: 230px;
 }
 
 .memory-card-placeholder {
@@ -685,8 +681,8 @@ main {
   flex-direction: column;
   justify-content: center;
   gap: 8px;
-  padding: 30px;
-  background: linear-gradient(135deg, #fffdf8, #f2eadc);
+  padding: 22px;
+  background: #fbf8f1;
 }
 
 .memory-card-copy strong {
@@ -755,30 +751,14 @@ main {
   display: grid;
   place-items: center;
   gap: 18px;
-  min-height: 280px;
+  min-height: 225px;
   text-align: center;
 }
 
 .committee-browser .committee-card img {
-  width: min(190px, 78%);
-  height: 150px;
+  width: min(170px, 74%);
+  height: 125px;
   object-fit: contain;
-}
-
-.committee-monogram {
-  display: grid;
-  width: 150px;
-  aspect-ratio: 1 / 1;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, .42);
-  border-radius: 28px;
-  background:
-    radial-gradient(circle at 28% 22%, rgba(255, 255, 255, .18), transparent 28%),
-    linear-gradient(145deg, #18a79d, var(--teal-dark));
-  color: var(--cream);
-  font: 700 clamp(18px, 2vw, 25px)/1 var(--serif);
-  letter-spacing: .04em;
-  box-shadow: 0 14px 28px rgba(7, 63, 60, .2);
 }
 
 .committee-card:hover,
@@ -835,8 +815,11 @@ main {
 }
 
 .committee-logo {
-  width: min(180px, 54vw);
+  display: block;
+  width: min(240px, 68vw);
+  max-height: 150px;
   margin: 0 auto 22px;
+  object-fit: contain;
 }
 
 .chair-intro {
@@ -1119,10 +1102,7 @@ main {
 
 #team {
   min-height: calc(100vh - 72px);
-  background:
-    radial-gradient(circle at 10% 16%, rgba(198, 155, 72, .12), transparent 28%),
-    radial-gradient(circle at 90% 72%, rgba(24, 52, 79, .1), transparent 30%),
-    linear-gradient(145deg, #f8f3ea 0%, #f5f7f5 48%, #e9eff3 100%);
+  background: #f5f1e9;
 }
 
 #team .team-grid:not(.leadership-grid) {
@@ -1249,7 +1229,7 @@ main {
 footer {
   padding: 42px clamp(18px, 6vw, 88px) 112px;
   color: #e8faf8;
-  background: linear-gradient(135deg, #052826, #083f3d 58%, #0f8f87);
+  background: #0b403c;
 }
 
 .footer-grid {
