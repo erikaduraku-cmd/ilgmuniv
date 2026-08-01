@@ -22,6 +22,21 @@ function showPage() {
 window.addEventListener('hashchange', showPage);
 showPage();
 
+document.querySelectorAll('.chair-report').forEach((report) => {
+  if (!report.textContent.includes('Chair reports coming soon')) return;
+
+  report.innerHTML = `
+    <div class="report-heading">
+      <span class="report-heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v5h5M10 12h5M10 16h5"/></svg></span>
+      <div><span class="report-kicker">Delegate preparation</span><h2>Chair Reports</h2></div>
+    </div>
+    <p class="report-intro">Chair reports for both topics are coming soon.</p>
+    <div class="report-grid">
+      <div class="report-card report-card-coming-soon"><span class="report-card-top"><span class="report-topic">Topic 1</span><span class="report-format">Coming soon</span></span><strong>Chair report coming soon</strong><span class="report-action"><span>In preparation</span><span aria-hidden="true">…</span></span></div>
+      <div class="report-card report-card-coming-soon"><span class="report-card-top"><span class="report-topic">Topic 2</span><span class="report-format">Coming soon</span></span><strong>Chair report coming soon</strong><span class="report-action"><span>In preparation</span><span aria-hidden="true">…</span></span></div>
+    </div>`;
+});
+
 document.querySelectorAll('[data-page-top]').forEach((button) => {
   button.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -44,6 +59,17 @@ if (pageTopButton) {
       pageTopButton.style.setProperty('--arrow-shift', '0px');
     }, 180);
   }, { passive: true });
+}
+
+const quickActions = document.querySelector('.quick-actions');
+const siteFooter = document.querySelector('footer');
+
+if (quickActions && siteFooter && 'IntersectionObserver' in window) {
+  const footerObserver = new IntersectionObserver(([entry]) => {
+    quickActions.classList.toggle('is-hidden', entry.isIntersecting);
+  }, { threshold: 0.05 });
+
+  footerObserver.observe(siteFooter);
 }
 
 if (nav && navCursor) {
