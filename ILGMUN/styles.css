@@ -474,12 +474,39 @@ main {
   font: 700 17px/1.6 var(--sans);
 }
 
-#about > .card {
-  max-width: 1160px;
-  margin: 0 auto 20px;
+#about {
+  width: 100%;
+}
+
+.about-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  align-items: stretch;
+  overflow: hidden;
   border: 2px solid rgba(15, 143, 135, .48);
   border-radius: 6px;
+  background: var(--paper);
   box-shadow: 0 12px 26px rgba(7, 63, 60, .08);
+}
+
+.about-card {
+  min-width: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--paper);
+  box-shadow: none;
+}
+
+.about-card + .about-card {
+  border-left: 2px solid rgba(15, 143, 135, .48);
+}
+
+.about-card h2 {
+  margin-top: 0;
+  color: var(--teal-dark);
 }
 
 .gallery {
@@ -1421,6 +1448,7 @@ body.modal-lock {
   }
 
   .mun-memory-card,
+  .about-grid,
   .contact-layout,
   .chair-profile,
   .report-grid,
@@ -1434,6 +1462,11 @@ body.modal-lock {
 
   .report-heading {
     grid-template-columns: auto 1fr;
+  }
+
+  .about-card + .about-card {
+    border-top: 2px solid rgba(15, 143, 135, .48);
+    border-left: 0;
   }
 
 
