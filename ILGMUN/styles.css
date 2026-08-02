@@ -3730,6 +3730,19 @@ body { background: #f7f1e8; }
   justify-self: center;
 }
 
+/* Use more of the desktop viewport without scaling the cards or photos. */
+@media (min-width: 1000px) {
+  #team .team-grid.leadership-grid.unified-team-grid {
+    width: min(84vw, 1200px);
+    min-width: 816px;
+    max-width: 1200px;
+    grid-template-columns: repeat(8, 80px);
+    grid-auto-columns: 80px;
+    column-gap: 20px;
+    justify-content: space-between;
+  }
+}
+
 .team-committee-link {
   position: absolute;
   right: 12px;
