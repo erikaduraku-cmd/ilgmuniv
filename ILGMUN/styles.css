@@ -2528,3 +2528,62 @@ body.modal-lock {
 @media (hover: none) {
   .team-card-action { position: static; margin-top: 12px; opacity: 1; transform: none; }
 }
+
+/* Exact equal sizing across Leadership and Secretariat. */
+#team .team-roster { max-width: 1160px; }
+
+#team .leadership-grid,
+#team .secretariat-grid {
+  grid-auto-rows: 1fr;
+  justify-content: center;
+  gap: 34px;
+}
+
+#team .leadership-grid {
+  max-width: 850px;
+  grid-template-columns: repeat(3, 250px);
+}
+
+#team .secretariat-grid {
+  max-width: 1160px;
+  grid-template-columns: repeat(4, 250px);
+}
+
+#team .leadership-grid .team-card,
+#team .secretariat-grid .team-card {
+  width: 250px;
+  min-height: 392px;
+  padding: 20px 20px 26px;
+}
+
+#team .leadership-grid .team-card img,
+#team .secretariat-grid .team-card img,
+#team .team-grid.secretariat-grid:not(.leadership-grid) .team-card img {
+  width: 210px;
+  height: 210px;
+  aspect-ratio: 1 / 1;
+}
+
+#team .leadership-grid .team-card h2,
+#team .secretariat-grid .team-card h2 {
+  font-size: 24px;
+}
+
+#team .leadership-grid .team-card-copy,
+#team .secretariat-grid .team-card-copy {
+  min-height: 132px;
+  padding-top: 18px;
+}
+
+@media (max-width: 1160px) {
+  #team .secretariat-grid { grid-template-columns: repeat(2, 250px); }
+}
+
+@media (max-width: 860px) {
+  #team .leadership-grid { grid-template-columns: repeat(2, 250px); }
+}
+
+@media (max-width: 620px) {
+  #team .leadership-grid,
+  #team .secretariat-grid { grid-template-columns: 250px; }
+}
