@@ -2727,3 +2727,38 @@ body.modal-lock {
   #team .leadership-grid,
   #team .secretariat-grid { grid-template-columns: 220px; }
 }
+
+/* Team rows never wrap: 3 leadership and 4 Secretariat cards stay side by side. */
+#team .team-roster {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
+#team .leadership-grid,
+#team .secretariat-grid,
+#team .team-grid.secretariat-grid {
+  width: max-content;
+  max-width: none;
+  margin-right: auto;
+  margin-left: auto;
+  grid-auto-flow: column;
+  gap: 30px;
+}
+
+#team .leadership-grid {
+  grid-template-columns: repeat(3, 220px);
+  grid-auto-columns: 220px;
+}
+
+#team .secretariat-grid,
+#team .team-grid.secretariat-grid {
+  grid-template-columns: repeat(4, 220px);
+  grid-auto-columns: 220px;
+}
+
+#team .leadership-grid .team-card,
+#team .secretariat-grid .team-card {
+  width: 220px;
+}
