@@ -2587,3 +2587,56 @@ body.modal-lock {
   #team .leadership-grid,
   #team .secretariat-grid { grid-template-columns: 250px; }
 }
+
+/* Match the large portrait sizing in the supplied reference. */
+#team .leadership-grid,
+#team .secretariat-grid {
+  gap: 30px;
+}
+
+#team .leadership-grid {
+  max-width: 930px;
+  grid-template-columns: repeat(3, 290px);
+}
+
+#team .secretariat-grid {
+  max-width: 1250px;
+  grid-template-columns: repeat(4, 290px);
+}
+
+#team .leadership-grid .team-card,
+#team .secretariat-grid .team-card {
+  width: 290px;
+  min-height: 440px;
+  padding: 20px 20px 28px;
+}
+
+#team .leadership-grid .team-card img,
+#team .secretariat-grid .team-card img,
+#team .team-grid.secretariat-grid:not(.leadership-grid) .team-card img {
+  width: 250px;
+  height: 250px;
+  min-width: 250px;
+  min-height: 250px;
+  max-width: 250px;
+  max-height: 250px;
+  aspect-ratio: 1 / 1;
+}
+
+#team .leadership-grid .team-card-copy,
+#team .secretariat-grid .team-card-copy {
+  min-height: 142px;
+}
+
+@media (max-width: 1260px) {
+  #team .secretariat-grid { grid-template-columns: repeat(2, 290px); }
+}
+
+@media (max-width: 960px) {
+  #team .leadership-grid { grid-template-columns: repeat(2, 290px); }
+}
+
+@media (max-width: 700px) {
+  #team .leadership-grid,
+  #team .secretariat-grid { grid-template-columns: 290px; }
+}
