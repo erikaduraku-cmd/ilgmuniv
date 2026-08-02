@@ -1934,7 +1934,6 @@ body.modal-lock {
 .contact-info-card { background:#fffdf8; border-color:rgba(11,64,60,.12); }
 .contact-info-card > span { color:#147d77; }
 .contact-info-card a, .contact-info-card p { color:#0b403c; }
-.nav-cursor, nav a:hover, nav button:hover { background-color:#16877f; }
 
 /* Final unified palette pass — geometry intentionally unchanged. */
 .home-panels .announcements,
@@ -3691,6 +3690,64 @@ body { background: #f7f1e8; }
 .contact-info-card > span { color:#147d77; }
 .contact-info-card a, .contact-info-card p { color:#0b403c; }
 .nav-cursor, nav a:hover, nav button:hover { background-color:#16877f; }
+
+/* Team committee links reveal on card hover; card geometry is unchanged. */
+#team .team-grid.leadership-grid.unified-team-grid {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-auto-columns: auto;
+  padding-right: clamp(24px, 5vw, 84px);
+  padding-left: clamp(24px, 5vw, 84px);
+}
+
+#team .team-grid.leadership-grid.unified-team-grid .team-card {
+  justify-self: center;
+}
+
+.team-committee-link {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  padding: 8px 9px;
+  border: 1px solid #147d77;
+  border-radius: 8px;
+  background: #147d77;
+  color: #fffdf8;
+  font: 800 10px/1 var(--sans);
+  text-align: center;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease, background-color .18s ease;
+}
+
+.team-card-has-committee:hover .team-committee-link,
+.team-card-has-committee:focus-within .team-committee-link {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.team-committee-link:hover,
+.team-committee-link:focus-visible {
+  background: #0b403c;
+  outline: none;
+}
+
+@media (hover: none) {
+  .team-committee-link {
+    position: static;
+    display: block;
+    margin-top: 8px;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+}
 
 #security-council > .chair-intro {
   width: calc(50% - 8px);
