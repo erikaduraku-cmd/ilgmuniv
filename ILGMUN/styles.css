@@ -4,13 +4,13 @@
   --paper: #ffffff;
   --mist: #eef8f7;
   --mist-strong: #dff3f1;
-  --teal: #0f8f87;
+  --teal: #147d77;
   --teal-dark: #073f3c;
-  --gold: #c69b48;
-  --terracotta: #a45f49;
-  --navy: #18344f;
-  --navy-deep: #10283f;
-  --cream: #f5efe4;
+  --gold: #147d77;
+  --terracotta: #147d77;
+  --navy: #0b403c;
+  --navy-deep: #0b403c;
+  --cream: #f7f1e8;
   --line: rgba(15, 143, 135, .18);
   --shadow: 0 18px 46px rgba(7, 63, 60, .12);
   --radius: 8px;
@@ -1792,6 +1792,199 @@ body.modal-lock {
   }
 }
 
+/* Final palette safeguards after component-specific rules. */
+.committee-browser .committee-card,
+.committee-browser .committee-card:nth-child(2),
+.committee-browser .committee-card:nth-child(3),
+.committee-browser .committee-card:nth-child(4) {
+  background: #fffdf8;
+  border-color: rgba(11, 64, 60, .12);
+}
+
+#team .leadership-grid .team-card { border-top-color: #9eaf91; }
+#team .secretariat-grid .team-card { border-top-color: #aa98b6; }
+
+#security-council > .chair-intro {
+  width: calc(50% - 8px);
+  border-top: 3px solid #9eaf91;
+  border-radius: 20px 5px 5px 20px;
+  background: linear-gradient(145deg, #fffdf8, #f0f3eb);
+}
+
+#security-council > .chair-intro + .chair-intro {
+  margin-left: 16px;
+  border-top-color: #aa98b6;
+  border-radius: 5px 20px 20px 5px;
+  background: linear-gradient(145deg, #fffdf8, #f2edf4);
+}
+
+@media (max-width: 760px) {
+  #security-council > .chair-intro,
+  #security-council > .chair-intro + .chair-intro {
+    width: 100%;
+    margin-left: 0;
+    border-radius: 18px;
+  }
+}
+
+/* Four-color identity and distinct committee content systems. */
+body { background: #f7f1e8; }
+
+.btn.primary,
+.quick-action.primary { background: #0b403c; color: #fffdf8; }
+.btn.primary:hover,
+.quick-action.primary:hover { background: #147d77; }
+
+.home-panels .card {
+  border-top-color: #0b403c;
+  background: rgba(255, 253, 248, .94);
+}
+
+.countdown strong { color: #0b403c; }
+
+.committee-browser .committee-card,
+.committee-browser .committee-card:nth-child(2),
+.committee-browser .committee-card:nth-child(3),
+.committee-browser .committee-card:nth-child(4) {
+  background: #fffdf8;
+  border-color: rgba(11, 64, 60, .12);
+}
+
+.committee-browser .committee-card:hover {
+  border-color: rgba(20, 125, 119, .34);
+}
+
+.committee-page {
+  width: 100%;
+  max-width: none;
+  padding-right: clamp(20px, 3vw, 44px);
+  padding-left: clamp(20px, 3vw, 44px);
+}
+
+.committee-page > h1,
+.committee-page > .committee-level,
+.committee-page > .committee-logo {
+  max-width: 1160px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.committee-page > .chair-intro,
+.committee-page > .committee-brief,
+.committee-page > .topics-block,
+.committee-page > .chair-report {
+  width: 100%;
+  max-width: none;
+}
+
+#security-council > .chair-intro {
+  width: calc(50% - 8px);
+  margin-top: 32px;
+  padding: clamp(24px, 3vw, 36px);
+  border-top: 3px solid #147d77;
+  border-radius: 20px 4px 4px 20px;
+  background: linear-gradient(145deg, #fffdf8, #f0f3eb);
+}
+
+#security-council > .chair-intro + .chair-intro {
+  margin-left: 16px;
+  border-top-color: #b4a5bf;
+  border-radius: 4px 20px 20px 4px;
+  background: linear-gradient(145deg, #fffdf8, #f2edf4);
+}
+
+#security-council > .chair-intro:first-of-type::before {
+  content: "Meet your chairs · United Nations Security Council";
+}
+
+#security-council > .chair-intro:nth-of-type(2)::before { content: "Co-chair"; }
+
+.topics-block {
+  padding: clamp(28px, 4vw, 52px) 0;
+  border: 0;
+  border-top: 1px solid rgba(11, 64, 60, .16);
+  border-bottom: 1px solid rgba(11, 64, 60, .16);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.topics-block > h2 {
+  margin-bottom: 28px;
+  font-size: clamp(34px, 4vw, 48px);
+}
+
+.topics-block ol { gap: clamp(18px, 3vw, 34px); }
+
+.topics-block li {
+  min-height: 210px;
+  padding: 28px;
+  gap: 22px;
+  border: 0;
+  border-left: 4px solid #d9e1cf;
+  border-radius: 0 14px 14px 0;
+  background: #fffdf8;
+  box-shadow: 0 8px 20px rgba(11, 64, 60, .055);
+  font-size: clamp(18px, 2vw, 23px);
+}
+
+.topics-block li::before {
+  content: counter(topic, decimal-leading-zero);
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #a5b497;
+  font: 700 48px/1 var(--serif);
+  letter-spacing: -.04em;
+}
+
+.chair-report {
+  padding: clamp(30px, 4vw, 54px);
+  border: 0;
+  border-radius: 20px;
+  background: #0b403c;
+  box-shadow: 0 18px 38px rgba(11, 64, 60, .16);
+}
+
+.chair-report::before { display: none; }
+.chair-report h2,
+.chair-report .report-heading h2 { color: #fffdf8; }
+.chair-report .report-kicker,
+.chair-report .report-intro { color: #b9d5cf; }
+
+.chair-report .report-card {
+  border: 1px solid rgba(255, 253, 248, .2);
+  background: #fffdf8;
+  box-shadow: none;
+}
+
+.chair-report .report-card-coming-soon {
+  background: rgba(255, 253, 248, .9);
+  border-style: solid;
+}
+
+#about .about-card:first-child {
+  background: linear-gradient(135deg, rgba(217, 225, 207, .58), rgba(255, 253, 248, .9) 48%);
+}
+
+#about .about-card:last-child {
+  background: linear-gradient(225deg, rgba(221, 210, 229, .58), rgba(255, 253, 248, .9) 48%);
+}
+
+#team .team-card,
+#team .leadership-grid .team-card,
+#team .secretariat-grid .team-card { background: #fffdf8; }
+
+@media (max-width: 760px) {
+  #security-council > .chair-intro,
+  #security-council > .chair-intro + .chair-intro {
+    width: 100%;
+    margin-left: 0;
+    border-radius: 18px;
+  }
+}
+
 @media (max-width: 920px) {
   .home-panels,
   .message,
@@ -2911,4 +3104,38 @@ body.modal-lock {
   .committee-browser .committee-card img { width: 76px; height: 76px; }
   #security-council > .chair-intro { width: 100%; display: block; }
   #security-council > .chair-intro + .chair-intro { margin-left: 0; }
+}
+
+.committee-browser .committee-card,
+.committee-browser .committee-card:nth-child(2),
+.committee-browser .committee-card:nth-child(3),
+.committee-browser .committee-card:nth-child(4) {
+  background: #fffdf8;
+  border-color: rgba(11, 64, 60, .12);
+}
+
+#team .leadership-grid .team-card { border-top-color: #9eaf91; }
+#team .secretariat-grid .team-card { border-top-color: #aa98b6; }
+
+#security-council > .chair-intro {
+  width: calc(50% - 8px);
+  border-top: 3px solid #9eaf91;
+  border-radius: 20px 5px 5px 20px;
+  background: linear-gradient(145deg, #fffdf8, #f0f3eb);
+}
+
+#security-council > .chair-intro + .chair-intro {
+  margin-left: 16px;
+  border-top-color: #aa98b6;
+  border-radius: 5px 20px 20px 5px;
+  background: linear-gradient(145deg, #fffdf8, #f2edf4);
+}
+
+@media (max-width: 760px) {
+  #security-council > .chair-intro,
+  #security-council > .chair-intro + .chair-intro {
+    width: 100%;
+    margin-left: 0;
+    border-radius: 18px;
+  }
 }
