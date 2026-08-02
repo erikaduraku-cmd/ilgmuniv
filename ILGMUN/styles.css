@@ -1895,6 +1895,58 @@ body.modal-lock {
   }
 }
 
+/* Committee heading alignment, balanced UNHRC masthead, and footer social marks. */
+#unhrc {
+  padding-top: clamp(88px, 8vw, 118px);
+  scroll-margin-top: 84px;
+}
+
+#unhrc > h1 {
+  max-width: 1280px;
+  font-size: clamp(38px, 5.2vw, 68px);
+  line-height: 1.04;
+}
+
+.committee-page > .chairs-shared-heading {
+  max-width: none;
+  margin: 36px 0 -8px;
+  padding-left: clamp(4px, 1vw, 12px);
+  text-align: left;
+}
+
+#security-council > .chair-intro,
+#security-council > .chair-intro + .chair-intro {
+  border-radius: 18px;
+}
+
+#security-council > .chair-intro .chair-profile {
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 20px;
+}
+
+#security-council > .chair-intro .chair-profile img {
+  width: 190px;
+  height: 190px;
+  margin: 0;
+}
+
+footer .social-icon-link img {
+  padding: 6px;
+  border-radius: 9px;
+  background: #fffdf8;
+  filter: none;
+}
+
+@media (max-width: 940px) {
+  #security-council > .chair-intro .chair-profile {
+    grid-template-columns: 1fr;
+  }
+
+  #security-council > .chair-intro .chair-profile img {
+    margin: 0 auto 16px;
+  }
+}
+
 .chairs-shared-heading {
   width: 100%;
   margin: 34px 0 -10px;
