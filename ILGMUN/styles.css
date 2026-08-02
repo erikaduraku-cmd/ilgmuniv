@@ -1898,6 +1898,28 @@ body.modal-lock {
   }
 }
 
+/* Full-width Team surface with a close, fixed-size card cluster. */
+#team {
+  background: #e5ecdf;
+}
+
+#team > .page-title:first-child {
+  background: transparent;
+}
+
+#team .team-grid.leadership-grid.unified-team-grid {
+  width: 816px;
+  min-width: 816px;
+  max-width: 816px;
+  margin: 0 auto;
+  padding: 18px;
+  grid-template-columns: repeat(8, 80px);
+  grid-auto-columns: 80px;
+  gap: 20px;
+  justify-content: start;
+  background: transparent;
+}
+
 /* Palette lock — must remain last. No Team geometry in this block. */
 .home-panels .announcements, .home-panels .countdown-card { background:#fffdf8; border:1px solid rgba(11,64,60,.12); border-top:3px solid #147d77; }
 .welcome-block { background:#f7f1e8; border:0; box-shadow:none; }
@@ -1923,7 +1945,6 @@ body.modal-lock {
 .resource-card:hover { border-color:rgba(11,64,60,.28); }
 .resource-number { color:#87947f; }
 .resource-action { color:#147d77; }
-#team, #team .team-grid.leadership-grid.unified-team-grid { background:#f7f1e8; }
 #team .team-grid.leadership-grid.unified-team-grid .team-card, #team .team-grid.leadership-grid.unified-team-grid .team-card:nth-child(n) { height:278px; border:1px solid rgba(11,64,60,.12); background:#fffdf8; }
 #team .team-card h2 { color:#0b403c; }
 #team .team-card p { color:#5d6b65; }
@@ -3679,7 +3700,8 @@ body { background: #f7f1e8; }
 .resource-card:hover { border-color:rgba(11,64,60,.28); }
 .resource-number { color:#87947f; }
 .resource-action { color:#147d77; }
-#team, #team .team-grid.leadership-grid.unified-team-grid { background:#f7f1e8; }
+#team { background:#e5ecdf; }
+#team .team-grid.leadership-grid.unified-team-grid { background:transparent; }
 #team .team-grid.leadership-grid.unified-team-grid .team-card, #team .team-grid.leadership-grid.unified-team-grid .team-card:nth-child(n) { height:278px; border:1px solid rgba(11,64,60,.12); background:#fffdf8; }
 #team .team-card h2 { color:#0b403c; }
 #team .team-card p { color:#5d6b65; }
@@ -3693,13 +3715,13 @@ body { background: #f7f1e8; }
 
 /* Team committee links reveal on card hover; card geometry is unchanged. */
 #team .team-grid.leadership-grid.unified-team-grid {
-  width: 100%;
-  min-width: 0;
-  max-width: none;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-  grid-auto-columns: auto;
-  padding-right: clamp(24px, 5vw, 84px);
-  padding-left: clamp(24px, 5vw, 84px);
+  width: 816px;
+  min-width: 816px;
+  max-width: 816px;
+  grid-template-columns: repeat(8, 80px);
+  grid-auto-columns: 80px;
+  padding-right: 18px;
+  padding-left: 18px;
 }
 
 #team .team-grid.leadership-grid.unified-team-grid .team-card {
