@@ -1873,21 +1873,20 @@ body.modal-lock {
   border-color: rgba(11, 64, 60, .12);
 }
 
-#team .leadership-grid .team-card { border-top-color: #9eaf91; }
 #team .secretariat-grid .team-card { border-top-color: #aa98b6; }
 
 #security-council > .chair-intro {
   width: calc(50% - 8px);
-  border-top: 3px solid #9eaf91;
+  border: 1px solid rgba(11,64,60,.12);
   border-radius: 20px 5px 5px 20px;
-  background: linear-gradient(145deg, #fffdf8, #f0f3eb);
+  background: #fffdf8;
 }
 
 #security-council > .chair-intro + .chair-intro {
   margin-left: 16px;
-  border-top-color: #aa98b6;
+  border-color: rgba(11,64,60,.12);
   border-radius: 5px 20px 20px 5px;
-  background: linear-gradient(145deg, #fffdf8, #f2edf4);
+  background: #fffdf8;
 }
 
 @media (max-width: 760px) {
@@ -1898,6 +1897,208 @@ body.modal-lock {
     border-radius: 18px;
   }
 }
+
+/* Palette lock — must remain last. No Team geometry in this block. */
+.home-panels .announcements, .home-panels .countdown-card { background:#fffdf8; border:1px solid rgba(11,64,60,.12); border-top:3px solid #147d77; }
+.welcome-block { background:#f7f1e8; border:0; box-shadow:none; }
+.theme-pill { padding:clamp(24px,4vw,42px); border:1px solid rgba(11,64,60,.12); border-left:4px solid #aab99d; border-radius:12px; background:#fffdf8; text-align:left; }
+#about .about-card:first-child { background:#e1e6d8; }
+#about .about-card:last-child { background:#e5dce9; }
+#about > .gallery, #about .conference-history-grid { background:#f7f1e8; }
+.committee-browser .committee-card, .committee-browser .committee-card:nth-child(2), .committee-browser .committee-card:nth-child(3), .committee-browser .committee-card:nth-child(4) { background:#fffdf8; border-color:rgba(11,64,60,.12); }
+.committee-card-level, .committee-card-action { color:#147d77; }
+.committee-browser .committee-card h2 { color:#0b403c; }
+.committee-browser .committee-card p { color:#35534f; }
+.committee-page > .chair-intro, #security-council > .chair-intro, #security-council > .chair-intro + .chair-intro { border:1px solid rgba(11,64,60,.12); background:#fffdf8; box-shadow:0 10px 26px rgba(11,64,60,.06); }
+.topics-block { background:transparent; }
+.topics-block li { min-height:180px; border:1px solid rgba(11,64,60,.12); border-radius:12px; background:#fffdf8; box-shadow:none; }
+.topics-block li::before { content:"Topic " counter(topic); padding:7px 11px; border-radius:999px; background:#147d77; color:#fffdf8; font:800 11px/1 var(--sans); letter-spacing:.06em; text-transform:uppercase; }
+.chair-report { border:1px solid rgba(11,64,60,.12); background:#f7f1e8; box-shadow:none; }
+.chair-report h2, .chair-report .report-heading h2 { color:#0b403c; }
+.chair-report .report-kicker, .chair-report .report-intro { color:#4f6b66; }
+.chair-report .report-card { border:1px solid rgba(11,64,60,.12); background:#fffdf8; }
+.chair-report .report-card-coming-soon { background:#e5e9df; }
+.report-topic, .report-format { background:#147d77; color:#fffdf8; }
+.resource-card { background:#fffdf8; border-color:rgba(11,64,60,.12); }
+.resource-card:hover { border-color:rgba(11,64,60,.28); }
+.resource-number { color:#87947f; }
+.resource-action { color:#147d77; }
+#team, #team .team-grid.leadership-grid.unified-team-grid { background:#f7f1e8; }
+#team .team-grid.leadership-grid.unified-team-grid .team-card, #team .team-grid.leadership-grid.unified-team-grid .team-card:nth-child(n) { height:278px; border:1px solid rgba(11,64,60,.12); background:#fffdf8; }
+#team .team-card h2 { color:#0b403c; }
+#team .team-card p { color:#5d6b65; }
+#team > .page-title:first-child p { color:#5d6b65; }
+#team .team-committee-role { color:#147d77; }
+#contact, .contact-layout { background:#f7f1e8; }
+.contact-layout { border:0; }
+.contact-info-card { background:#fffdf8; border-color:rgba(11,64,60,.12); }
+.contact-info-card > span { color:#147d77; }
+.contact-info-card a, .contact-info-card p { color:#0b403c; }
+.nav-cursor, nav a:hover, nav button:hover { background-color:#16877f; }
+
+/* Final unified palette pass — geometry intentionally unchanged. */
+.home-panels .announcements,
+.home-panels .countdown-card {
+  background: #fffdf8;
+  border: 1px solid rgba(11, 64, 60, .12);
+  border-top: 3px solid #147d77;
+}
+
+.welcome-block {
+  background: #f7f1e8;
+  border: 0;
+  box-shadow: none;
+}
+
+.theme-pill {
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid rgba(11, 64, 60, .12);
+  border-left: 4px solid #aab99d;
+  border-radius: 12px;
+  background: #fffdf8;
+  text-align: left;
+}
+
+#about .about-card:first-child {
+  background: #e1e6d8;
+}
+
+#about .about-card:last-child {
+  background: #e5dce9;
+}
+
+#about > .gallery,
+#about .conference-history-grid {
+  background: #f7f1e8;
+}
+
+.committee-browser .committee-card,
+.committee-browser .committee-card:nth-child(2),
+.committee-browser .committee-card:nth-child(3),
+.committee-browser .committee-card:nth-child(4) {
+  background: #fffdf8;
+  border: 1px solid rgba(11, 64, 60, .12);
+}
+
+.committee-card-level,
+.committee-card-action { color: #147d77; }
+.committee-browser .committee-card h2 { color: #0b403c; }
+.committee-browser .committee-card p { color: #35534f; }
+
+.committee-page > .chair-intro,
+#security-council > .chair-intro,
+#security-council > .chair-intro + .chair-intro {
+  border: 1px solid rgba(11, 64, 60, .12);
+  border-top: 1px solid rgba(11, 64, 60, .12);
+  background: #fffdf8;
+  box-shadow: 0 10px 26px rgba(11, 64, 60, .06);
+}
+
+.topics-block {
+  background: transparent;
+}
+
+.topics-block li {
+  min-height: 180px;
+  border: 1px solid rgba(11, 64, 60, .12);
+  border-left: 1px solid rgba(11, 64, 60, .12);
+  border-radius: 12px;
+  background: #fffdf8;
+  box-shadow: none;
+}
+
+.topics-block li::before {
+  content: "Topic " counter(topic);
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #147d77;
+  color: #fffdf8;
+  font: 800 11px/1 var(--sans);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.chair-report {
+  border: 1px solid rgba(11, 64, 60, .12);
+  background: #f7f1e8;
+  box-shadow: none;
+}
+
+.chair-report h2,
+.chair-report .report-heading h2 { color: #0b403c; }
+.chair-report .report-kicker,
+.chair-report .report-intro { color: #4f6b66; }
+
+.chair-report .report-card {
+  border: 1px solid rgba(11, 64, 60, .12);
+  background: #fffdf8;
+}
+
+.chair-report .report-card-coming-soon {
+  background: #e5e9df;
+  border-color: rgba(11, 64, 60, .1);
+}
+
+.report-topic,
+.report-format {
+  background: #147d77;
+  color: #fffdf8;
+}
+
+.resource-card {
+  background: #fffdf8;
+  border: 1px solid rgba(11, 64, 60, .12);
+}
+
+.resource-card:hover {
+  border-color: rgba(11, 64, 60, .28);
+}
+
+.resource-number { color: #87947f; }
+.resource-action { color: #147d77; }
+
+#team {
+  background: #f7f1e8;
+}
+
+#team .team-grid.leadership-grid.unified-team-grid {
+  background: #f7f1e8;
+}
+
+#team .team-grid.leadership-grid.unified-team-grid .team-card,
+#team .team-grid.leadership-grid.unified-team-grid .team-card:nth-child(n) {
+  height: 278px;
+  border: 1px solid rgba(11, 64, 60, .12);
+  border-top: 1px solid rgba(11, 64, 60, .12);
+  background: #fffdf8;
+}
+
+#team .team-card h2 { color: #0b403c; }
+#team .team-card p { color: #5d6b65; }
+#team .team-committee-role,
+#team .team-card-action { color: #147d77; }
+
+#contact {
+  background: #f7f1e8;
+}
+
+.contact-layout {
+  border: 0;
+  background: #f7f1e8;
+}
+
+.contact-info-card {
+  border: 1px solid rgba(11, 64, 60, .12);
+  background: #fffdf8;
+}
+
+.contact-info-card > span { color: #147d77; }
+.contact-info-card a,
+.contact-info-card p { color: #0b403c; }
+
+.nav-cursor,
+nav a:hover,
+nav button:hover { background-color: #16877f; }
 
 /* Isolated final Team grid — prevents all legacy Leadership/Secretariat rules. */
 #team .team-grid.leadership-grid.unified-team-grid {
@@ -2202,7 +2403,7 @@ body { background: #f7f1e8; }
   padding: clamp(24px, 3vw, 36px);
   border-top: 3px solid #147d77;
   border-radius: 20px 4px 4px 20px;
-  background: linear-gradient(145deg, #fffdf8, #f0f3eb);
+  background: #fffdf8;
 }
 
 #security-council > .chair-intro + .chair-intro {
@@ -3454,18 +3655,55 @@ body { background: #f7f1e8; }
 #team .leadership-grid .team-card { border-top-color: #9eaf91; }
 #team .secretariat-grid .team-card { border-top-color: #aa98b6; }
 
+/* Final palette lock. Team dimensions and placement are intentionally untouched. */
+.home-panels .announcements, .home-panels .countdown-card { background:#fffdf8; border:1px solid rgba(11,64,60,.12); border-top:3px solid #147d77; }
+.welcome-block { background:#f7f1e8; border:0; box-shadow:none; }
+.theme-pill { padding:clamp(24px,4vw,42px); border:1px solid rgba(11,64,60,.12); border-left:4px solid #aab99d; border-radius:12px; background:#fffdf8; text-align:left; }
+#about .about-card:first-child { background:#e1e6d8; }
+#about .about-card:last-child { background:#e5dce9; }
+#about > .gallery, #about .conference-history-grid { background:#f7f1e8; }
+.committee-browser .committee-card, .committee-browser .committee-card:nth-child(2), .committee-browser .committee-card:nth-child(3), .committee-browser .committee-card:nth-child(4) { background:#fffdf8; border-color:rgba(11,64,60,.12); }
+.committee-card-level, .committee-card-action { color:#147d77; }
+.committee-browser .committee-card h2 { color:#0b403c; }
+.committee-browser .committee-card p { color:#35534f; }
+.committee-page > .chair-intro { border:1px solid rgba(11,64,60,.12); background:#fffdf8; box-shadow:0 10px 26px rgba(11,64,60,.06); }
+.topics-block { background:transparent; }
+.topics-block li { min-height:180px; border:1px solid rgba(11,64,60,.12); border-radius:12px; background:#fffdf8; box-shadow:none; }
+.topics-block li::before { content:"Topic " counter(topic); padding:7px 11px; border-radius:999px; background:#147d77; color:#fffdf8; font:800 11px/1 var(--sans); letter-spacing:.06em; text-transform:uppercase; }
+.chair-report { border:1px solid rgba(11,64,60,.12); background:#f7f1e8; box-shadow:none; }
+.chair-report h2, .chair-report .report-heading h2 { color:#0b403c; }
+.chair-report .report-kicker, .chair-report .report-intro { color:#4f6b66; }
+.chair-report .report-card { border:1px solid rgba(11,64,60,.12); background:#fffdf8; }
+.chair-report .report-card-coming-soon { background:#e5e9df; }
+.report-topic, .report-format { background:#147d77; color:#fffdf8; }
+.resource-card { background:#fffdf8; border-color:rgba(11,64,60,.12); }
+.resource-card:hover { border-color:rgba(11,64,60,.28); }
+.resource-number { color:#87947f; }
+.resource-action { color:#147d77; }
+#team, #team .team-grid.leadership-grid.unified-team-grid { background:#f7f1e8; }
+#team .team-grid.leadership-grid.unified-team-grid .team-card, #team .team-grid.leadership-grid.unified-team-grid .team-card:nth-child(n) { height:278px; border:1px solid rgba(11,64,60,.12); background:#fffdf8; }
+#team .team-card h2 { color:#0b403c; }
+#team .team-card p { color:#5d6b65; }
+#team .team-committee-role { color:#147d77; }
+#contact, .contact-layout { background:#f7f1e8; }
+.contact-layout { border:0; }
+.contact-info-card { background:#fffdf8; border-color:rgba(11,64,60,.12); }
+.contact-info-card > span { color:#147d77; }
+.contact-info-card a, .contact-info-card p { color:#0b403c; }
+.nav-cursor, nav a:hover, nav button:hover { background-color:#16877f; }
+
 #security-council > .chair-intro {
   width: calc(50% - 8px);
   border-top: 3px solid #9eaf91;
   border-radius: 20px 5px 5px 20px;
-  background: linear-gradient(145deg, #fffdf8, #f0f3eb);
+  background: #fffdf8;
 }
 
 #security-council > .chair-intro + .chair-intro {
   margin-left: 16px;
   border-top-color: #aa98b6;
   border-radius: 5px 20px 20px 5px;
-  background: linear-gradient(145deg, #fffdf8, #f2edf4);
+  background: #fffdf8;
 }
 
 @media (max-width: 760px) {
