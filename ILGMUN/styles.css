@@ -1792,6 +1792,40 @@ body.modal-lock {
   }
 }
 
+/* Shared UNSC heading and soft-green Secretariat field. */
+.chairs-shared-heading {
+  width: 100%;
+  margin: 34px 0 -10px;
+  text-align: center;
+}
+
+.chairs-shared-heading span {
+  color: #6d7e62;
+  font: 800 10px/1 var(--sans);
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+.chairs-shared-heading h2 {
+  margin: 8px 0 0;
+  color: #0b403c;
+  font-size: clamp(30px, 4vw, 44px);
+}
+
+#security-council > .chair-intro::before,
+#security-council > .chair-intro:first-of-type::before,
+#security-council > .chair-intro:nth-of-type(2)::before {
+  display: none;
+  content: none;
+}
+
+#team .secretariat-grid,
+#team .team-grid.secretariat-grid {
+  padding: 28px;
+  border-radius: 20px;
+  background: #e5ecdf;
+}
+
 /* Final palette safeguards after component-specific rules. */
 .committee-browser .committee-card,
 .committee-browser .committee-card:nth-child(2),
@@ -1825,6 +1859,39 @@ body.modal-lock {
     margin-left: 0;
     border-radius: 18px;
   }
+}
+
+.chairs-shared-heading {
+  width: 100%;
+  margin: 34px 0 -10px;
+  text-align: center;
+}
+
+.chairs-shared-heading span {
+  color: #6d7e62;
+  font: 800 10px/1 var(--sans);
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+.chairs-shared-heading h2 {
+  margin: 8px 0 0;
+  color: #0b403c;
+  font-size: clamp(30px, 4vw, 44px);
+}
+
+#security-council > .chair-intro::before,
+#security-council > .chair-intro:first-of-type::before,
+#security-council > .chair-intro:nth-of-type(2)::before {
+  display: none;
+  content: none;
+}
+
+#team .secretariat-grid,
+#team .team-grid.secretariat-grid {
+  padding: 28px;
+  border-radius: 20px;
+  background: #e5ecdf;
 }
 
 /* Four-color identity and distinct committee content systems. */
