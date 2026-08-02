@@ -1971,6 +1971,44 @@ body.modal-lock {
   #team .unified-team-grid { grid-template-columns: 1fr; }
 }
 
+/* Lock the unified Team grid to compact cards at every screen width. */
+#team .team-roster {
+  overflow-x: auto;
+}
+
+#team .unified-team-grid {
+  width: 816px;
+  min-width: 816px;
+  max-width: 816px;
+  padding: 18px;
+  grid-template-columns: repeat(8, 80px);
+  grid-auto-flow: row;
+  gap: 20px;
+  justify-content: start;
+}
+
+#team .unified-team-grid .team-card,
+#team .unified-team-grid .team-card:nth-child(5) {
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+  min-height: 278px;
+  grid-column: span 2;
+}
+
+#team .unified-team-grid .team-card:nth-child(5) {
+  grid-column: 2 / span 2;
+}
+
+#team .unified-team-grid .team-card img {
+  width: 152px;
+  height: 152px;
+  min-width: 152px;
+  min-height: 152px;
+  max-width: 152px;
+  max-height: 152px;
+}
+
 .committee-page > .chairs-shared-heading {
   max-width: none;
   margin: 36px 0 -8px;
