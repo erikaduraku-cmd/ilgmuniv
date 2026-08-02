@@ -2645,7 +2645,7 @@ body { background: #f7f1e8; }
 
 /* Restored Team layout with linked committee-chair profiles. */
 #team {
-  padding: clamp(48px, 6vw, 78px) clamp(20px, 4vw, 58px) clamp(76px, 9vw, 120px);
+  padding: clamp(30px, 4vw, 48px) clamp(16px, 3vw, 42px) clamp(42px, 5vw, 64px);
   background:
     linear-gradient(100deg, rgba(248, 243, 233, .98) 0%, rgba(246, 245, 237, .96) 42%, rgba(229, 239, 241, .88) 100%);
 }
@@ -2653,7 +2653,7 @@ body { background: #f7f1e8; }
 #team > .page-title:first-child {
   width: 100%;
   max-width: 1120px;
-  margin: 0 auto clamp(42px, 5vw, 64px);
+  margin: 0 auto clamp(24px, 3vw, 36px);
   padding: 0 20px;
   border-radius: 0;
   background: transparent;
@@ -2664,7 +2664,7 @@ body { background: #f7f1e8; }
 #team > .page-title:first-child h1 {
   margin: 0;
   color: #0b403c;
-  font-size: clamp(48px, 6vw, 72px);
+  font-size: clamp(40px, 5vw, 58px);
   letter-spacing: -.025em;
 }
 
@@ -2675,7 +2675,7 @@ body { background: #f7f1e8; }
 }
 
 #team .team-roster { max-width: 1050px; }
-#team .team-roster + .team-roster { margin-top: clamp(56px, 7vw, 84px); }
+#team .team-roster + .team-roster { margin-top: clamp(28px, 3.5vw, 42px); }
 
 #team .leadership-grid {
   max-width: 850px;
@@ -2691,7 +2691,7 @@ body { background: #f7f1e8; }
 
 #team .small-title {
   max-width: 1050px;
-  margin: 0 auto 30px;
+  margin: 0 auto 18px;
   padding: 0;
   background: transparent;
   box-shadow: none;
@@ -2699,7 +2699,7 @@ body { background: #f7f1e8; }
 
 #team .small-title h1 {
   color: #102d45;
-  font-size: clamp(42px, 5vw, 62px);
+  font-size: clamp(30px, 3.5vw, 42px);
   text-align: center;
 }
 
@@ -2953,31 +2953,31 @@ body { background: #f7f1e8; }
 
 #team .leadership-grid .team-card,
 #team .secretariat-grid .team-card {
-  width: 220px;
-  min-height: 350px;
-  padding: 16px 16px 22px;
+  width: 180px;
+  min-height: 278px;
+  padding: 14px 14px 18px;
 }
 
 #team .leadership-grid .team-card img,
 #team .secretariat-grid .team-card img,
 #team .team-grid.secretariat-grid:not(.leadership-grid) .team-card img {
-  width: 188px;
-  height: 188px;
-  min-width: 188px;
-  min-height: 188px;
-  max-width: 188px;
-  max-height: 188px;
+  width: 152px;
+  height: 152px;
+  min-width: 152px;
+  min-height: 152px;
+  max-width: 152px;
+  max-height: 152px;
 }
 
 #team .leadership-grid .team-card-copy,
 #team .secretariat-grid .team-card-copy {
-  min-height: 118px;
-  padding-top: 15px;
+  min-height: 92px;
+  padding-top: 12px;
 }
 
 #team .leadership-grid .team-card h2,
 #team .secretariat-grid .team-card h2 {
-  font-size: 21px;
+  font-size: 18px;
 }
 
 @media (max-width: 980px) {
@@ -3038,29 +3038,29 @@ body { background: #f7f1e8; }
   margin-right: auto;
   margin-left: auto;
   grid-auto-flow: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 #team .leadership-grid {
-  grid-template-columns: repeat(3, 220px);
-  grid-auto-columns: 220px;
-  padding: 28px;
+  grid-template-columns: repeat(3, 180px);
+  grid-auto-columns: 180px;
+  padding: 18px;
   border-radius: 20px;
   background: #e5ecdf;
 }
 
 #team .secretariat-grid,
 #team .team-grid.secretariat-grid {
-  grid-template-columns: repeat(4, 220px);
-  grid-auto-columns: 220px;
-  padding: 28px;
+  grid-template-columns: repeat(4, 180px);
+  grid-auto-columns: 180px;
+  padding: 18px;
   border-radius: 20px;
   background: #e5ecdf;
 }
 
 #team .leadership-grid .team-card,
 #team .secretariat-grid .team-card {
-  width: 220px;
+  width: 180px;
 }
 
 /* Cross-site editorial polish. */
