@@ -2652,18 +2652,18 @@ body { background: #f7f1e8; }
 
 #team > .page-title:first-child {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1120px;
   margin: 0 auto clamp(42px, 5vw, 64px);
-  padding: clamp(40px, 5vw, 64px) 24px;
-  border-radius: 14px;
-  background: linear-gradient(110deg, #102d45 0%, #18364e 62%, #38445f 100%);
-  box-shadow: 0 12px 28px rgba(20, 43, 62, .14);
+  padding: 0 20px;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
   text-align: center;
 }
 
 #team > .page-title:first-child h1 {
-  margin: 0 0 8px;
-  color: #fffdf7;
+  margin: 0;
+  color: #0b403c;
   font-size: clamp(48px, 6vw, 72px);
   letter-spacing: -.025em;
 }
@@ -3044,12 +3044,18 @@ body { background: #f7f1e8; }
 #team .leadership-grid {
   grid-template-columns: repeat(3, 220px);
   grid-auto-columns: 220px;
+  padding: 28px;
+  border-radius: 20px;
+  background: #e5ecdf;
 }
 
 #team .secretariat-grid,
 #team .team-grid.secretariat-grid {
   grid-template-columns: repeat(4, 220px);
   grid-auto-columns: 220px;
+  padding: 28px;
+  border-radius: 20px;
+  background: #e5ecdf;
 }
 
 #team .leadership-grid .team-card,
@@ -3147,8 +3153,8 @@ body { background: #f7f1e8; }
 }
 
 .committee-page > .chair-intro::before {
-  content: "Meet your chair";
-  display: block;
+  content: none;
+  display: none;
   margin-bottom: 9px;
   color: #7b6a50;
   font: 800 10px/1 var(--sans);
@@ -3163,7 +3169,7 @@ body { background: #f7f1e8; }
 }
 
 #security-council > .chair-intro + .chair-intro { margin-left: 20px; }
-#security-council > .chair-intro::before { content: "Meet your chairs"; }
+#security-council > .chair-intro::before { content: none; display: none; }
 #security-council > .chair-intro .chair-profile { grid-template-columns: 1fr; }
 #security-council > .chair-intro .chair-profile img { width: 180px; margin: 0 auto 18px; }
 
