@@ -3722,6 +3722,8 @@ body { background: #f7f1e8; }
   grid-auto-columns: 80px;
   padding-right: 18px;
   padding-left: 18px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #team .team-grid.leadership-grid.unified-team-grid .team-card {
@@ -3769,6 +3771,14 @@ body { background: #f7f1e8; }
     transform: none;
     pointer-events: auto;
   }
+}
+
+#team > .page-title:first-child p {
+  color: #5d6b65;
+}
+
+.quick-actions {
+  display: none;
 }
 
 #security-council > .chair-intro {
