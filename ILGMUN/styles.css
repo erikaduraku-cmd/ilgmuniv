@@ -3734,12 +3734,61 @@ body { background: #f7f1e8; }
 @media (min-width: 1000px) {
   #team .team-grid.leadership-grid.unified-team-grid {
     width: min(92vw, 980px);
-    min-width: 816px;
+    min-width: 964px;
     max-width: 980px;
-    grid-template-columns: repeat(8, 80px);
-    grid-auto-columns: 80px;
-    column-gap: 28px;
+    grid-template-columns: repeat(8, 102px);
+    grid-auto-columns: 102px;
+    column-gap: 16px;
     justify-content: center;
+  }
+
+  #team .team-grid.leadership-grid.unified-team-grid .team-card,
+  #team .team-grid.leadership-grid.unified-team-grid .team-card:nth-child(n) {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    overflow: visible;
+    border: 0;
+    border-radius: 14px;
+    background: transparent;
+    box-shadow: none;
+    filter: drop-shadow(0 12px 14px rgba(70, 64, 51, .11));
+  }
+
+  #team .team-grid.leadership-grid.unified-team-grid .team-card:hover {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    filter: drop-shadow(0 15px 17px rgba(70, 64, 51, .15));
+  }
+
+  #team .team-grid.leadership-grid.unified-team-grid .team-card img {
+    display: block;
+    width: 175px;
+    height: 175px;
+    min-width: 175px;
+    min-height: 175px;
+    max-width: 175px;
+    max-height: 175px;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 13px 13px 0 0;
+    box-shadow: none;
+  }
+
+  #team .team-grid.leadership-grid.unified-team-grid .team-card-copy,
+  #team .team-grid.leadership-grid.unified-team-grid .team-card:nth-child(even) .team-card-copy,
+  #team .team-grid.leadership-grid.unified-team-grid .team-card:nth-child(odd) .team-card-copy {
+    position: relative;
+    width: 175px;
+    min-height: 105px;
+    margin: 0 auto;
+    padding: 12px 8px 13px;
+    border-radius: 0 0 13px 13px;
+    background: #fffdf8;
   }
 }
 
@@ -3773,6 +3822,16 @@ body { background: #f7f1e8; }
 .team-committee-link:focus-visible {
   background: #0b403c;
   outline: none;
+}
+
+.team-committee-link span {
+  display: block;
+}
+
+.team-committee-link span + span {
+  margin-top: 3px;
+  font-size: 9px;
+  opacity: .88;
 }
 
 @media (hover: none) {
