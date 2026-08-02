@@ -1826,6 +1826,40 @@ body.modal-lock {
   background: #e5ecdf;
 }
 
+#team > .page-title:first-child {
+  max-width: 1120px;
+  margin: 0 auto clamp(42px, 6vw, 70px);
+  padding: 0 20px;
+  background: transparent;
+  box-shadow: none;
+}
+
+#team > .page-title:first-child h1 {
+  margin: 0;
+  color: #0b403c;
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 1.05;
+}
+
+#team .leadership-grid {
+  padding: 28px;
+  border-radius: 20px;
+  background: #e5ecdf;
+}
+
+.chairs-shared-heading {
+  margin-bottom: -8px;
+}
+
+.chairs-shared-heading h2 {
+  margin-top: 0;
+}
+
+.committee-page > .chair-intro::before {
+  display: none;
+  content: none;
+}
+
 /* Final palette safeguards after component-specific rules. */
 .committee-browser .committee-card,
 .committee-browser .committee-card:nth-child(2),
