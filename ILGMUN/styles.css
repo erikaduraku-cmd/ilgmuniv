@@ -3711,7 +3711,8 @@ body { background: #f7f1e8; }
 .contact-info-card { background:#fffdf8; border-color:rgba(11,64,60,.12); }
 .contact-info-card > span { color:#147d77; }
 .contact-info-card a, .contact-info-card p { color:#0b403c; }
-.nav-cursor, nav a:hover, nav button:hover { background-color:#16877f; }
+.nav-cursor { background-color:#16877f; }
+nav a:hover, nav button:hover { background-color:transparent; }
 
 /* Team committee links reveal on card hover; card geometry is unchanged. */
 #team .team-grid.leadership-grid.unified-team-grid {
