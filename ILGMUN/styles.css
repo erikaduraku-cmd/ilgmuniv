@@ -3099,6 +3099,8 @@ body { background: #f7f1e8; }
   padding: 18px;
   border-radius: 20px;
   background: #e5ecdf;
+  width: min(100%, 1040px);
+  justify-content: space-evenly;
 }
 
 #team .secretariat-grid,
@@ -3108,11 +3110,22 @@ body { background: #f7f1e8; }
   padding: 18px;
   border-radius: 20px;
   background: #e5ecdf;
+  width: min(100%, 1040px);
+  justify-content: space-evenly;
 }
 
 #team .leadership-grid .team-card,
 #team .secretariat-grid .team-card {
   width: 180px;
+}
+
+@media (max-width: 800px) {
+  #team .leadership-grid,
+  #team .secretariat-grid,
+  #team .team-grid.secretariat-grid {
+    width: max-content;
+    justify-content: start;
+  }
 }
 
 /* Cross-site editorial polish. */
