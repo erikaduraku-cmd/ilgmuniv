@@ -1899,6 +1899,62 @@ body.modal-lock {
   }
 }
 
+/* Isolated final Team grid — prevents all legacy Leadership/Secretariat rules. */
+#team .team-grid.leadership-grid.unified-team-grid {
+  width: 816px;
+  min-width: 816px;
+  max-width: 816px;
+  margin: 0 auto;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: repeat(8, 80px);
+  grid-auto-columns: 80px;
+  grid-auto-flow: row;
+  gap: 20px;
+  justify-content: start;
+  border-radius: 20px;
+  background: #e5ecdf;
+}
+
+#team .team-grid.leadership-grid.unified-team-grid .team-card {
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+  min-height: 278px;
+  padding: 14px 14px 18px;
+  display: block;
+  grid-column: span 2;
+  border-radius: 15px;
+  background: #fffdf8;
+}
+
+#team .team-grid.leadership-grid.unified-team-grid .team-card:nth-child(5) {
+  grid-column: 2 / span 2;
+}
+
+#team .team-grid.leadership-grid.unified-team-grid .team-card img {
+  width: 152px;
+  height: 152px;
+  min-width: 152px;
+  min-height: 152px;
+  max-width: 152px;
+  max-height: 152px;
+  margin: 0;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#team .team-grid.leadership-grid.unified-team-grid .team-card-copy {
+  min-height: 92px;
+  padding: 12px 2px 0;
+}
+
+#team .team-grid.leadership-grid.unified-team-grid .team-card h2 {
+  margin: 0 0 3px;
+  font-size: 18px;
+}
+
 /* One unified Team field with a balanced 4 + 3 arrangement. */
 #team .unified-team-grid {
   width: min(100%, 1040px);
