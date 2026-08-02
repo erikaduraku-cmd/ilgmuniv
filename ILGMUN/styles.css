@@ -1899,6 +1899,78 @@ body.modal-lock {
   }
 }
 
+/* One unified Team field with a balanced 4 + 3 arrangement. */
+#team .unified-team-grid {
+  width: min(100%, 1040px);
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 24px 20px;
+  border-radius: 22px;
+  background: #e5ecdf;
+}
+
+#team .unified-team-grid .team-card {
+  width: 100%;
+  min-width: 0;
+  min-height: 320px;
+  padding: 14px 14px 18px;
+  grid-column: span 2;
+  border-top-color: #9eaf91;
+}
+
+#team .unified-team-grid .team-card:nth-child(n + 4) {
+  border-top-color: #aa98b6;
+}
+
+#team .unified-team-grid .team-card:nth-child(5) {
+  grid-column: 2 / span 2;
+}
+
+#team .unified-team-grid .team-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  min-width: 0;
+  min-height: 0;
+  max-width: none;
+  max-height: none;
+}
+
+#team .unified-team-grid .team-card-copy {
+  min-height: 104px;
+  padding-top: 13px;
+}
+
+#team .unified-team-grid .team-card h2 {
+  font-size: 20px;
+}
+
+#team .unified-team-grid .team-card:nth-child(1) img { object-position: 50% 28%; }
+#team .unified-team-grid .team-card:nth-child(2) img { object-position: 50% 42%; }
+#team .unified-team-grid .team-card:nth-child(3) img { object-position: 50% 35%; }
+#team .unified-team-grid .team-card:nth-child(4) img { object-position: 50% 35%; }
+#team .unified-team-grid .team-card:nth-child(5) img { object-position: 50% 68%; }
+#team .unified-team-grid .team-card:nth-child(6) img { object-position: 50% 42%; }
+#team .unified-team-grid .team-card:nth-child(7) img { object-position: 50% 45%; }
+
+@media (max-width: 820px) {
+  #team .unified-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #team .unified-team-grid .team-card,
+  #team .unified-team-grid .team-card:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  #team .unified-team-grid { grid-template-columns: 1fr; }
+}
+
 .committee-page > .chairs-shared-heading {
   max-width: none;
   margin: 36px 0 -8px;
