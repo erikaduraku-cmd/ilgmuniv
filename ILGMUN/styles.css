@@ -3541,6 +3541,91 @@ body { background: #f7f1e8; }
   }
 }
 
+/* Final interaction, typography, report-label, and flowing-wave refinements. */
+#team > .page-title:first-child p {
+  font-family: "Snell Roundhand", "Segoe Script", "URW Chancery L", Georgia, cursive;
+  font-size: clamp(23px, 2.6vw, 31px);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .01em;
+}
+
+#team .team-grid.leadership-grid.unified-team-grid .team-row .team-card p {
+  color: #765168;
+  font: italic 600 12.5px/1.32 var(--serif);
+}
+
+#team .team-row .team-portrait,
+#team .team-row .team-portrait img,
+#team .team-row .team-portrait-link span {
+  overflow: hidden;
+  border-radius: 50% !important;
+  clip-path: circle(50% at 50% 50%);
+}
+
+#team .team-grid.leadership-grid.unified-team-grid .team-row .team-card:hover,
+#team .team-grid.leadership-grid.unified-team-grid .team-row .team-card:focus-within {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.report-format {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+  color: #202825 !important;
+  font: italic 600 12px/1.2 var(--serif) !important;
+  letter-spacing: .02em;
+  text-transform: none;
+}
+
+.team-waves {
+  top: 10%;
+  bottom: 8%;
+  width: clamp(125px, 15vw, 205px);
+}
+
+.team-waves span {
+  top: auto;
+  bottom: auto;
+  width: 210%;
+  height: 92px;
+  border: 10px solid #765168;
+  border-color: #765168 transparent #765168 #765168;
+  border-radius: 52% 48% 58% 42% / 54% 62% 38% 46%;
+}
+
+.team-waves-left span { right: 22%; }
+.team-waves-right span { left: 22%; }
+
+.team-waves span:nth-child(1) { top: 4%; transform: rotate(-5deg); }
+.team-waves span:nth-child(2) { top: 29%; width: 185%; transform: rotate(4deg); }
+.team-waves span:nth-child(3) { top: 55%; width: 220%; transform: rotate(-3deg); }
+.team-waves span:nth-child(4) { top: 78%; width: 172%; transform: rotate(5deg); }
+
+.team-waves-right span:nth-child(1) { transform: rotate(5deg) scaleX(-1); }
+.team-waves-right span:nth-child(2) { transform: rotate(-4deg) scaleX(-1); }
+.team-waves-right span:nth-child(3) { transform: rotate(3deg) scaleX(-1); }
+.team-waves-right span:nth-child(4) { transform: rotate(-5deg) scaleX(-1); }
+
+@media (max-width: 700px) {
+  #team .team-grid.leadership-grid.unified-team-grid .team-row .team-card p {
+    font-size: clamp(7.5px, 2.35vw, 10px);
+  }
+
+  .team-waves {
+    width: 78px;
+  }
+
+  .team-waves span {
+    height: 58px;
+    border-width: 7px;
+  }
+}
+
 /* Thin ribbon accents replace the previous Team side shapes. */
 #team::before,
 #team::after {
@@ -4998,4 +5083,180 @@ body:has(#home.active) .quick-actions {
     min-width: 0;
     min-height: 0;
   }
+}
+
+/* Final winning refinements. */
+#team > .page-title:first-child p {
+  font-family: "Bradley Hand", "Segoe Print", Georgia, cursive;
+  font-size: clamp(20px, 2.2vw, 27px);
+  font-style: italic;
+  font-weight: 400;
+}
+
+#team .team-grid.leadership-grid.unified-team-grid .team-row .team-card p {
+  color: #765168;
+  font: italic 600 12.5px/1.32 var(--serif);
+}
+
+#team .team-row .team-portrait,
+#team .team-row .team-portrait img,
+#team .team-row .team-portrait-link span {
+  overflow: hidden;
+  border-radius: 50% !important;
+  clip-path: circle(50% at 50% 50%);
+}
+
+#team .team-grid.leadership-grid.unified-team-grid .team-row .team-card:hover,
+#team .team-grid.leadership-grid.unified-team-grid .team-row .team-card:focus-within {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.report-format {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+  color: #202825 !important;
+  font: italic 600 12px/1.2 var(--serif) !important;
+  letter-spacing: .02em;
+  text-transform: none;
+}
+
+.team-waves {
+  top: 10%;
+  bottom: 8%;
+  width: clamp(125px, 15vw, 205px);
+}
+
+.team-waves span {
+  top: auto;
+  bottom: auto;
+  width: 210%;
+  height: 92px;
+  border: 10px solid #765168;
+  border-color: #765168 transparent #765168 #765168;
+  border-radius: 52% 48% 58% 42% / 54% 62% 38% 46%;
+}
+
+.team-waves-left span { right: 22%; }
+.team-waves-right span { left: 22%; }
+.team-waves span:nth-child(1) { top: 4%; transform: rotate(-5deg); }
+.team-waves span:nth-child(2) { top: 29%; bottom: auto; width: 185%; transform: rotate(4deg); }
+.team-waves span:nth-child(3) { top: 55%; bottom: auto; width: 220%; transform: rotate(-3deg); }
+.team-waves span:nth-child(4) { top: 78%; bottom: auto; width: 172%; transform: rotate(5deg); }
+.team-waves-right span:nth-child(1) { transform: rotate(5deg) scaleX(-1); }
+.team-waves-right span:nth-child(2) { transform: rotate(-4deg) scaleX(-1); }
+.team-waves-right span:nth-child(3) { transform: rotate(3deg) scaleX(-1); }
+.team-waves-right span:nth-child(4) { transform: rotate(-5deg) scaleX(-1); }
+
+@media (max-width: 700px) {
+  #team .team-grid.leadership-grid.unified-team-grid .team-row .team-card p {
+    font-size: clamp(7.5px, 2.35vw, 10px);
+  }
+
+  .team-waves { width: 78px; }
+  .team-waves span { height: 58px; border-width: 7px; }
+}
+
+/* Cohesive asymmetrical flowing-water clusters. */
+.team-waves {
+  top: 17%;
+  bottom: 15%;
+  width: clamp(135px, 16vw, 220px);
+  overflow: hidden;
+}
+
+.team-waves span {
+  bottom: auto;
+  border-style: solid;
+  border-color: #765168;
+  background: transparent;
+}
+
+.team-waves-left span:nth-child(1) {
+  top: 8%;
+  right: 34%;
+  width: 245%;
+  height: 148px;
+  border-width: 11px 8px 0 12px;
+  border-radius: 58% 42% 64% 36% / 48% 64% 36% 52%;
+  transform: rotate(-7deg);
+}
+
+.team-waves-left span:nth-child(2) {
+  top: 27%;
+  right: 12%;
+  width: 178%;
+  height: 102px;
+  border-width: 7px 0 9px 7px;
+  border-radius: 46% 54% 38% 62% / 62% 44% 56% 38%;
+  transform: rotate(7deg);
+}
+
+.team-waves-left span:nth-child(3) {
+  top: 44%;
+  right: 43%;
+  width: 228%;
+  height: 136px;
+  border-width: 0 10px 12px 8px;
+  border-radius: 62% 38% 55% 45% / 42% 58% 42% 58%;
+  transform: rotate(-4deg);
+}
+
+.team-waves-left span:nth-child(4) {
+  top: 65%;
+  right: 4%;
+  width: 154%;
+  height: 88px;
+  border-width: 8px 8px 7px 0;
+  border-radius: 42% 58% 66% 34% / 58% 36% 64% 42%;
+  transform: rotate(10deg);
+}
+
+.team-waves-right span:nth-child(1) {
+  top: 4%;
+  left: 18%;
+  width: 190%;
+  height: 112px;
+  border-width: 9px 12px 8px 0;
+  border-radius: 38% 62% 46% 54% / 64% 40% 60% 36%;
+  transform: rotate(9deg);
+}
+
+.team-waves-right span:nth-child(2) {
+  top: 23%;
+  left: 46%;
+  width: 242%;
+  height: 152px;
+  border-width: 12px 9px 0 10px;
+  border-radius: 64% 36% 58% 42% / 44% 62% 38% 56%;
+  transform: rotate(-6deg);
+}
+
+.team-waves-right span:nth-child(3) {
+  top: 51%;
+  left: 6%;
+  width: 166%;
+  height: 92px;
+  border-width: 6px 0 8px 9px;
+  border-radius: 54% 46% 34% 66% / 38% 60% 40% 62%;
+  transform: rotate(6deg);
+}
+
+.team-waves-right span:nth-child(4) {
+  top: 67%;
+  left: 35%;
+  width: 216%;
+  height: 126px;
+  border-width: 0 11px 10px 7px;
+  border-radius: 36% 64% 56% 44% / 62% 42% 58% 38%;
+  transform: rotate(-9deg);
+}
+
+@media (max-width: 700px) {
+  .team-waves { width: 82px; }
+  .team-waves span { transform-origin: center; }
 }

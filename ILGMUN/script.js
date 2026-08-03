@@ -262,6 +262,7 @@ if (homeSlideshowImage) {
 }
 
 const revealTargets = document.querySelectorAll([
+  '.hero-overlay > *',
   '#home > section:not(.hero)',
   '#about > *',
   '#committees > *',
@@ -283,7 +284,11 @@ window.requestAnimationFrame(() => {
 if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) entry.target.classList.add('is-revealed');
+      const isImmediateHomeElement = entry.target.matches('.hero-overlay > *, .home-feature');
+      const homeIsActive = document.getElementById('home')?.classList.contains('active');
+      if (entry.isIntersecting || (isImmediateHomeElement && homeIsActive)) {
+        entry.target.classList.add('is-revealed');
+      }
     });
   }, { threshold: 0.08, rootMargin: '0px 0px -28%' });
 
@@ -298,14 +303,23 @@ window.addEventListener('hashchange', () => {
   const activeReveals = activePage.querySelectorAll('.scroll-reveal');
   activeReveals.forEach((element) => element.classList.remove('is-revealed'));
 
+  void activePage.offsetWidth;
+
   window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
       activeReveals.forEach((element) => {
         const bounds = element.getBoundingClientRect();
-        if (bounds.top < window.innerHeight * .92 && bounds.bottom > 0) {
+        const isImmediateHomeElement = element.matches('.hero-overlay > *, .home-feature');
+        if ((bounds.top < window.innerHeight * .92 && bounds.bottom > 0) || isImmediateHomeElement) {
           element.classList.add('is-revealed');
         }
       });
     });
+  });
+});
+
+window.requestAnimationFrame(() => {
+  document.querySelectorAll('#home.active .hero-overlay > *, #home.active .home-feature').forEach((element) => {
+    element.classList.add('is-revealed');
   });
 });
