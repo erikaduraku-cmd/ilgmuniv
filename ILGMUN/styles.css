@@ -3876,3 +3876,41 @@ nav a:hover, nav button:hover { background-color:transparent; }
     border-radius: 18px;
   }
 }
+
+/* Final requested editorial refinements. */
+.welcome-block .theme-pill {
+  width: 100%;
+  max-width: 1180px;
+  padding: clamp(22px, 3vw, 34px) clamp(26px, 4vw, 52px);
+}
+
+.welcome-block .theme-pill strong {
+  font-size: clamp(28px, 4.15vw, 52px);
+  line-height: 1.08;
+}
+
+.message .signature span {
+  margin-top: 5px;
+  color: #147d77;
+  font: italic 600 15px/1.45 var(--serif);
+  letter-spacing: .01em;
+}
+
+#team > .page-title:first-child p {
+  color: #171b19;
+  font-family: "Brush Script MT", "Segoe Script", "Snell Roundhand", cursive;
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+  .welcome-block .theme-pill {
+    padding: 22px 20px;
+  }
+
+  .welcome-block .theme-pill strong {
+    font-size: clamp(27px, 9vw, 38px);
+    line-height: 1.12;
+  }
+}
