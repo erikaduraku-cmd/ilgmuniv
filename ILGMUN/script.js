@@ -227,3 +227,85 @@ document.querySelectorAll('[data-close-resource]').forEach((button) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeResourceModal();
 });
+
+const homeSlideshowImage = document.getElementById('home-slideshow-image');
+const homeSlideshowSlides = [
+  '/home-slides/01.png',
+  '/home-slides/02.png',
+  '/home-slides/03.png',
+  '/home-slides/04.png',
+  '/home-slides/05.png',
+  '/home-slides/06.png',
+  '/home-slides/07.png'
+];
+
+if (homeSlideshowImage) {
+  let slideQueue = [];
+
+  const refillSlideQueue = () => {
+    slideQueue = [...homeSlideshowSlides];
+    for (let index = slideQueue.length - 1; index > 0; index -= 1) {
+      const randomIndex = Math.floor(Math.random() * (index + 1));
+      [slideQueue[index], slideQueue[randomIndex]] = [slideQueue[randomIndex], slideQueue[index]];
+    }
+  };
+
+  refillSlideQueue();
+  window.setInterval(() => {
+    if (!slideQueue.length) refillSlideQueue();
+    homeSlideshowImage.classList.add('is-changing');
+    window.setTimeout(() => {
+      homeSlideshowImage.src = slideQueue.shift();
+      homeSlideshowImage.classList.remove('is-changing');
+    }, 220);
+  }, 2000);
+}
+
+const revealTargets = document.querySelectorAll([
+  '#home > section:not(.hero)',
+  '#about > *',
+  '#committees > *',
+  '.committee-page > *',
+  '#resources > *',
+  '#team > :not(.team-waves)',
+  '#contact > *'
+].join(','));
+
+revealTargets.forEach((element, index) => {
+  element.classList.add('scroll-reveal');
+  element.style.setProperty('--reveal-delay', `${(index % 4) * 55}ms`);
+});
+
+window.requestAnimationFrame(() => {
+  document.documentElement.classList.add('scroll-reveals-armed');
+});
+
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.classList.add('is-revealed');
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -28%' });
+
+  revealTargets.forEach((element) => revealObserver.observe(element));
+} else {
+  revealTargets.forEach((element) => element.classList.add('is-revealed'));
+}
+
+window.addEventListener('hashchange', () => {
+  const activePage = document.querySelector('.page.active');
+  if (!activePage) return;
+  const activeReveals = activePage.querySelectorAll('.scroll-reveal');
+  activeReveals.forEach((element) => element.classList.remove('is-revealed'));
+
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
+      activeReveals.forEach((element) => {
+        const bounds = element.getBoundingClientRect();
+        if (bounds.top < window.innerHeight * .92 && bounds.bottom > 0) {
+          element.classList.add('is-revealed');
+        }
+      });
+    });
+  });
+});
