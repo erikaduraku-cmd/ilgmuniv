@@ -17,6 +17,11 @@ function showPage() {
     page.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  const quickActions = document.querySelector('.quick-actions');
+  if (quickActions) {
+    quickActions.classList.toggle('is-home-page', page?.id === 'home');
+  }
 }
 
 window.addEventListener('hashchange', showPage);
