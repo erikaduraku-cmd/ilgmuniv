@@ -3473,6 +3473,159 @@ body { background: #f7f1e8; }
   #team .secretariat-grid { grid-template-columns: 290px; }
 }
 
+/* Sparse editorial Team contours and final portrait/type refinements. */
+#team > .page-title:first-child p {
+  font-family: "Snell Roundhand", "Segoe Script", "Bradley Hand", cursive;
+  font-size: clamp(21px, 2.25vw, 29px);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: .01em;
+}
+
+#team .team-card img[alt="Elif Buse Güven"] {
+  object-position: 50% 72%;
+}
+
+.team-contours span {
+  width: 56%;
+  height: 300px;
+  border-width: 2px;
+  border-color: #b5c4b1;
+}
+
+.team-contours span:nth-child(1) { top: -80px; left: -22%; width: 62%; height: 270px; }
+.team-contours span:nth-child(2) { top: 18%; left: -25%; width: 64%; height: 360px; border-color: #c0cbbd; }
+.team-contours span:nth-child(3) { top: 56%; left: -20%; width: 58%; height: 330px; border-color: #b9c7b5; }
+.team-contours span:nth-child(4) { top: 4%; left: auto; right: -24%; width: 62%; height: 320px; border-color: #c9bec6; }
+.team-contours span:nth-child(5) { top: 34%; left: auto; right: -22%; width: 59%; height: 350px; border-color: #b7c5b3; }
+.team-contours span:nth-child(6) { top: 68%; bottom: auto; left: auto; right: -26%; width: 65%; height: 280px; border-color: #c2cdbf; }
+
+.scroll-reveal.is-revealed {
+  will-change: auto;
+}
+
+footer .social-icon-link img,
+.social-name-link img {
+  filter: none;
+}
+
+@media (max-width: 700px) {
+  .team-contours span,
+  .team-contours span:nth-child(3),
+  .team-contours span:nth-child(4) {
+    width: 68%;
+  }
+
+  .team-contours span:nth-child(1),
+  .team-contours span:nth-child(2),
+  .team-contours span:nth-child(3) { left: -36%; }
+  .team-contours span:nth-child(4),
+  .team-contours span:nth-child(5),
+  .team-contours span:nth-child(6) { left: auto; right: -36%; }
+}
+
+/* Winning restrained Team contour treatment. */
+#team > .page-title:first-child p {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-size: clamp(21px, 2.25vw, 29px);
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+#team .team-card img[alt="Elif Buse Güven"] { object-position: 50% 90%; }
+
+.team-contours span { border-width: 2px; border-radius: 50%; }
+.team-contours span:nth-child(1) { display: block; top: 2%; left: -23%; width: 55%; height: 430px; border-color: #bcc9b8; transform: rotate(-8deg); }
+.team-contours span:nth-child(2) { display: block; top: 51%; left: -25%; width: 56%; height: 390px; border-color: #c4cec1; transform: rotate(7deg); }
+.team-contours span:nth-child(3) { display: block; top: 10%; left: auto; right: -25%; width: 56%; height: 410px; border-color: #cbbfc7; transform: rotate(8deg); }
+.team-contours span:nth-child(4) { display: block; top: 58%; left: auto; right: -23%; width: 54%; height: 360px; border-color: #bdc9ba; transform: rotate(-6deg); }
+.team-contours span:nth-child(5),
+.team-contours span:nth-child(6) { display: none; }
+
+@media (max-width: 700px) {
+  .team-contours span:nth-child(1),
+  .team-contours span:nth-child(2) { left: -44%; width: 72%; }
+  .team-contours span:nth-child(3),
+  .team-contours span:nth-child(4) { left: auto; right: -44%; width: 72%; }
+}
+
+/* Final restrained Team contours. */
+#team > .page-title:first-child p {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-size: clamp(21px, 2.25vw, 29px);
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+#team .team-card img[alt="Elif Buse Güven"] { object-position: 50% 90%; }
+
+.team-contours span {
+  border-width: 2px;
+  border-radius: 50%;
+}
+
+.team-contours span:nth-child(1) {
+  display: block;
+  top: 2%;
+  left: -23%;
+  width: 55%;
+  height: 430px;
+  border-color: #bcc9b8;
+  transform: rotate(-8deg);
+}
+
+.team-contours span:nth-child(2) {
+  display: block;
+  top: 51%;
+  left: -25%;
+  width: 56%;
+  height: 390px;
+  border-color: #c4cec1;
+  transform: rotate(7deg);
+}
+
+.team-contours span:nth-child(3) {
+  display: block;
+  top: 10%;
+  left: auto;
+  right: -25%;
+  width: 56%;
+  height: 410px;
+  border-color: #cbbfc7;
+  transform: rotate(8deg);
+}
+
+.team-contours span:nth-child(4) {
+  display: block;
+  top: 58%;
+  left: auto;
+  right: -23%;
+  width: 54%;
+  height: 360px;
+  border-color: #bdc9ba;
+  transform: rotate(-6deg);
+}
+
+.team-contours span:nth-child(5),
+.team-contours span:nth-child(6) { display: none; }
+
+@media (max-width: 700px) {
+  .team-contours span:nth-child(1),
+  .team-contours span:nth-child(2) {
+    left: -44%;
+    width: 72%;
+  }
+
+  .team-contours span:nth-child(3),
+  .team-contours span:nth-child(4) {
+    left: auto;
+    right: -44%;
+    width: 72%;
+  }
+}
+
 /* Reference layout: four compact Secretariat cards stay on one row. */
 #team .leadership-grid,
 #team .secretariat-grid {
@@ -5259,4 +5412,162 @@ body:has(#home.active) .quick-actions {
 @media (max-width: 700px) {
   .team-waves { width: 82px; }
   .team-waves span { transform-origin: center; }
+}
+
+/* Page revisit animation and layered editorial contour palette. */
+@keyframes page-revisit-fade {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+
+.page-reentering .scroll-reveal.is-revealed {
+  animation: page-revisit-fade .48s cubic-bezier(.2, .72, .2, 1) both;
+}
+
+.team-waves span:nth-child(1) { border-color: #765168; }
+.team-waves span:nth-child(2) { border-color: #174b45; }
+.team-waves span:nth-child(3) { border-color: #82967c; }
+.team-waves span:nth-child(4) { border-color: #39766f; }
+
+.team-waves-left span:nth-child(1) { border-width: 12px 7px 0 10px; }
+.team-waves-left span:nth-child(2) { border-width: 6px 0 8px 6px; }
+.team-waves-left span:nth-child(3) { border-width: 0 9px 4px 5px; }
+.team-waves-left span:nth-child(4) { border-width: 7px 6px 6px 0; }
+.team-waves-right span:nth-child(1) { border-width: 5px 9px 6px 0; }
+.team-waves-right span:nth-child(2) { border-width: 10px 7px 0 8px; }
+.team-waves-right span:nth-child(3) { border-width: 4px 0 6px 7px; }
+.team-waves-right span:nth-child(4) { border-width: 0 11px 8px 5px; }
+
+@media (max-width: 700px) {
+  .team-waves-left span:nth-child(1) { border-width: 9px 5px 0 8px; }
+  .team-waves-left span:nth-child(2) { border-width: 5px 0 7px 5px; }
+  .team-waves-left span:nth-child(3) { border-width: 0 7px 3px 4px; }
+  .team-waves-left span:nth-child(4) { border-width: 6px 5px 5px 0; }
+  .team-waves-right span:nth-child(1) { border-width: 4px 7px 5px 0; }
+  .team-waves-right span:nth-child(2) { border-width: 8px 6px 0 7px; }
+  .team-waves-right span:nth-child(3) { border-width: 3px 0 5px 6px; }
+  .team-waves-right span:nth-child(4) { border-width: 0 9px 7px 4px; }
+}
+
+/* Smoother reveals and sparse topographic Team background. */
+.scroll-reveals-armed .scroll-reveal {
+  transition:
+    opacity .72s ease-out var(--reveal-delay, 0ms),
+    transform .72s cubic-bezier(.16, .7, .22, 1) var(--reveal-delay, 0ms);
+}
+
+@keyframes page-revisit-fade-smooth {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+.page-reentering .scroll-reveal.is-revealed {
+  animation: page-revisit-fade-smooth .72s cubic-bezier(.16, .7, .22, 1) both;
+}
+
+.team-contours {
+  position: absolute !important;
+  z-index: 0 !important;
+  inset: 5% 0 4%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.team-contours span {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  height: 260px;
+  border: 1px solid #b7c5b1;
+  border-radius: 50%;
+}
+
+.team-contours span:nth-child(1) { top: -95px; height: 245px; }
+.team-contours span:nth-child(2) { top: 8%; left: -18%; width: 136%; height: 315px; border-color: #c2ccc0; }
+.team-contours span:nth-child(3) { top: 28%; left: -7%; width: 114%; height: 360px; border-color: #aebdb0; }
+.team-contours span:nth-child(4) { top: 49%; left: -16%; width: 132%; height: 330px; border-color: #c8bfc5; }
+.team-contours span:nth-child(5) { top: 68%; left: -5%; width: 110%; height: 275px; border-color: #b3c1b2; }
+.team-contours span:nth-child(6) { bottom: -110px; left: -14%; width: 128%; height: 250px; border-color: #c3cdc0; }
+
+@media (max-width: 700px) {
+  .team-contours span {
+    left: -30%;
+    width: 160%;
+    height: 190px;
+  }
+
+  .team-contours span:nth-child(3),
+  .team-contours span:nth-child(4) {
+    left: -42%;
+    width: 184%;
+  }
+}
+
+/* Final sparse Team background and requested finishing details. */
+#team > .page-title:first-child p {
+  font-family: "Snell Roundhand", "Segoe Script", "Bradley Hand", cursive;
+  font-size: clamp(21px, 2.25vw, 29px);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: .01em;
+}
+
+#team .team-card img[alt="Elif Buse Güven"] { object-position: 50% 72%; }
+
+.team-contours span {
+  width: 56%;
+  height: 300px;
+  border-width: 2px;
+  border-color: #b5c4b1;
+}
+
+.team-contours span:nth-child(1) { top: -80px; left: -22%; width: 62%; height: 270px; }
+.team-contours span:nth-child(2) { top: 18%; left: -25%; width: 64%; height: 360px; border-color: #c0cbbd; }
+.team-contours span:nth-child(3) { top: 56%; left: -20%; width: 58%; height: 330px; border-color: #b9c7b5; }
+.team-contours span:nth-child(4) { top: 4%; left: auto; right: -24%; width: 62%; height: 320px; border-color: #c9bec6; }
+.team-contours span:nth-child(5) { top: 34%; left: auto; right: -22%; width: 59%; height: 350px; border-color: #b7c5b3; }
+.team-contours span:nth-child(6) { top: 68%; bottom: auto; left: auto; right: -26%; width: 65%; height: 280px; border-color: #c2cdbf; }
+
+.scroll-reveal.is-revealed { will-change: auto; }
+
+footer .social-icon-link img,
+.social-name-link img { filter: none; }
+
+@media (max-width: 700px) {
+  .team-contours span,
+  .team-contours span:nth-child(3),
+  .team-contours span:nth-child(4) { width: 68%; }
+
+  .team-contours span:nth-child(1),
+  .team-contours span:nth-child(2),
+  .team-contours span:nth-child(3) { left: -36%; }
+  .team-contours span:nth-child(4),
+  .team-contours span:nth-child(5),
+  .team-contours span:nth-child(6) { left: auto; right: -36%; }
+}
+
+/* Winning restrained Team contour treatment. */
+#team > .page-title:first-child p {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-size: clamp(21px, 2.25vw, 29px);
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+#team .team-card img[alt="Elif Buse Güven"] { object-position: 50% 90%; }
+
+.team-contours span { border-width: 2px; border-radius: 50%; }
+.team-contours span:nth-child(1) { display: block; top: 2%; left: -23%; width: 55%; height: 430px; border-color: #bcc9b8; transform: rotate(-8deg); }
+.team-contours span:nth-child(2) { display: block; top: 51%; left: -25%; width: 56%; height: 390px; border-color: #c4cec1; transform: rotate(7deg); }
+.team-contours span:nth-child(3) { display: block; top: 10%; left: auto; right: -25%; width: 56%; height: 410px; border-color: #cbbfc7; transform: rotate(8deg); }
+.team-contours span:nth-child(4) { display: block; top: 58%; left: auto; right: -23%; width: 54%; height: 360px; border-color: #bdc9ba; transform: rotate(-6deg); }
+.team-contours span:nth-child(5),
+.team-contours span:nth-child(6) { display: none; }
+
+@media (max-width: 700px) {
+  .team-contours span:nth-child(1),
+  .team-contours span:nth-child(2) { left: -44%; width: 72%; }
+  .team-contours span:nth-child(3),
+  .team-contours span:nth-child(4) { left: auto; right: -44%; width: 72%; }
 }

@@ -1,6 +1,7 @@
 const nav = document.getElementById('site-nav');
 const navToggle = document.querySelector('.nav-toggle');
 const navCursor = document.querySelector('.nav-cursor');
+let hasShownInitialPage = false;
 
 function showPage() {
   const hash = window.location.hash || '#home';
@@ -14,14 +15,37 @@ function showPage() {
   });
 
   if (page) {
+    const isRevisit = hasShownInitialPage;
+    const pageReveals = page.querySelectorAll('.scroll-reveal');
+
+    if (isRevisit) {
+      page.classList.add('page-reentering');
+      pageReveals.forEach((element) => element.classList.remove('is-revealed'));
+    }
+
     page.classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
+
+    if (isRevisit) {
+      window.requestAnimationFrame(() => {
+        pageReveals.forEach((element) => {
+          const bounds = element.getBoundingClientRect();
+          const isImmediateHomeElement = element.matches('.hero-overlay > *, .home-feature');
+          if ((bounds.top < window.innerHeight * .92 && bounds.bottom > 0) || isImmediateHomeElement) {
+            element.classList.add('is-revealed');
+          }
+        });
+        window.setTimeout(() => page.classList.remove('page-reentering'), 900);
+      });
+    }
   }
 
   const quickActions = document.querySelector('.quick-actions');
   if (quickActions) {
     quickActions.classList.toggle('is-home-page', page?.id === 'home');
   }
+
+  hasShownInitialPage = true;
 }
 
 window.addEventListener('hashchange', showPage);
@@ -268,8 +292,13 @@ const revealTargets = document.querySelectorAll([
   '#committees > *',
   '.committee-page > *',
   '#resources > *',
-  '#team > :not(.team-waves)',
-  '#contact > *'
+  '#team > :not(.team-waves):not(.team-contours)',
+  '#contact > *',
+  '.chair-profile img',
+  '.chair-profile > div',
+  '.topics-block li',
+  '.chair-report .report-card',
+  '#team .team-card'
 ].join(','));
 
 revealTargets.forEach((element, index) => {
@@ -296,27 +325,6 @@ if ('IntersectionObserver' in window) {
 } else {
   revealTargets.forEach((element) => element.classList.add('is-revealed'));
 }
-
-window.addEventListener('hashchange', () => {
-  const activePage = document.querySelector('.page.active');
-  if (!activePage) return;
-  const activeReveals = activePage.querySelectorAll('.scroll-reveal');
-  activeReveals.forEach((element) => element.classList.remove('is-revealed'));
-
-  void activePage.offsetWidth;
-
-  window.requestAnimationFrame(() => {
-    window.requestAnimationFrame(() => {
-      activeReveals.forEach((element) => {
-        const bounds = element.getBoundingClientRect();
-        const isImmediateHomeElement = element.matches('.hero-overlay > *, .home-feature');
-        if ((bounds.top < window.innerHeight * .92 && bounds.bottom > 0) || isImmediateHomeElement) {
-          element.classList.add('is-revealed');
-        }
-      });
-    });
-  });
-});
 
 window.requestAnimationFrame(() => {
   document.querySelectorAll('#home.active .hero-overlay > *, #home.active .home-feature').forEach((element) => {
