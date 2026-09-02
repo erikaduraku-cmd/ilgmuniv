@@ -3566,41 +3566,6 @@ footer .social-icon-link img,
   .team-contours span:nth-child(4) { left: auto; right: -44%; width: 72%; }
 }
 
-/* Eight-person roster: keep the five-chair row balanced after adding Amaya. */
-#team .team-row-bottom { gap: 20px; }
-
-#team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card,
-#team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card:nth-child(n) {
-  flex-basis: 180px;
-  width: 180px;
-  min-width: 180px;
-  max-width: 180px;
-}
-
-#team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card-copy,
-#team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card p {
-  width: 180px;
-  max-width: 180px;
-}
-
-@media (max-width: 700px) {
-  #team .team-row-bottom { gap: 4px; }
-
-  #team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card,
-  #team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card:nth-child(n) {
-    flex-basis: calc((100% - 16px) / 5);
-    width: calc((100% - 16px) / 5);
-    min-width: 0;
-    max-width: none;
-  }
-
-  #team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card-copy,
-  #team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card p {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
 /* Final restrained Team contours. */
 #team > .page-title:first-child p {
   font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
