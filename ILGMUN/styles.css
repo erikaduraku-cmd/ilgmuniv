@@ -1796,6 +1796,22 @@ body.modal-lock {
   }
 }
 
+/* UNHRC co-chair layout. */
+#unhrc > .chair-intro {
+  width: calc(50% - 10px);
+  display: inline-block;
+  vertical-align: top;
+}
+
+#unhrc > .chair-intro + .chair-intro { margin-left: 20px; }
+#unhrc > .chair-intro .chair-profile { grid-template-columns: 1fr; }
+#unhrc > .chair-intro .chair-profile img { width: 180px; margin: 0 auto 18px; }
+
+@media (max-width: 760px) {
+  #unhrc > .chair-intro { width: 100%; display: block; }
+  #unhrc > .chair-intro + .chair-intro { margin-left: 0; }
+}
+
 /* Shared UNSC heading and soft-green Secretariat field. */
 .chairs-shared-heading {
   width: 100%;
@@ -3548,6 +3564,41 @@ footer .social-icon-link img,
   .team-contours span:nth-child(2) { left: -44%; width: 72%; }
   .team-contours span:nth-child(3),
   .team-contours span:nth-child(4) { left: auto; right: -44%; width: 72%; }
+}
+
+/* Eight-person roster: keep the five-chair row balanced after adding Amaya. */
+#team .team-row-bottom { gap: 20px; }
+
+#team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card,
+#team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card:nth-child(n) {
+  flex-basis: 180px;
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+}
+
+#team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card-copy,
+#team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card p {
+  width: 180px;
+  max-width: 180px;
+}
+
+@media (max-width: 700px) {
+  #team .team-row-bottom { gap: 4px; }
+
+  #team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card,
+  #team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card:nth-child(n) {
+    flex-basis: calc((100% - 16px) / 5);
+    width: calc((100% - 16px) / 5);
+    min-width: 0;
+    max-width: none;
+  }
+
+  #team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card-copy,
+  #team .team-grid.leadership-grid.unified-team-grid .team-row-bottom .team-card p {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 /* Final restrained Team contours. */
