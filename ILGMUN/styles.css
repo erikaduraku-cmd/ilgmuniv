@@ -1806,22 +1806,6 @@ body.modal-lock {
   }
 }
 
-/* UNHRC co-chair layout. */
-#unhrc > .chair-intro {
-  width: calc(50% - 10px);
-  display: inline-block;
-  vertical-align: top;
-}
-
-#unhrc > .chair-intro + .chair-intro { margin-left: 20px; }
-#unhrc > .chair-intro .chair-profile { grid-template-columns: 1fr; }
-#unhrc > .chair-intro .chair-profile img { width: 180px; margin: 0 auto 18px; }
-
-@media (max-width: 760px) {
-  #unhrc > .chair-intro { width: 100%; display: block; }
-  #unhrc > .chair-intro + .chair-intro { margin-left: 0; }
-}
-
 /* Shared UNSC heading and soft-green Secretariat field. */
 .chairs-shared-heading {
   width: 100%;
