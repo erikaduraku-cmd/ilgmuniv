@@ -352,6 +352,16 @@ main {
 
 .page.active {
   display: block;
+  animation: page-enter .72s cubic-bezier(.16, .7, .22, 1) both;
+}
+
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page.active { animation: none; }
 }
 
 .home-page {

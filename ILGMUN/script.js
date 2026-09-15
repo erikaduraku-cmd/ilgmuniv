@@ -1,7 +1,6 @@
 const nav = document.getElementById('site-nav');
 const navToggle = document.querySelector('.nav-toggle');
 const navCursor = document.querySelector('.nav-cursor');
-let hasShownInitialPage = false;
 
 function showPage() {
   const hash = window.location.hash || '#home';
@@ -15,37 +14,14 @@ function showPage() {
   });
 
   if (page) {
-    const isRevisit = hasShownInitialPage;
-    const pageReveals = page.querySelectorAll('.scroll-reveal');
-
-    if (isRevisit) {
-      page.classList.add('page-reentering');
-      pageReveals.forEach((element) => element.classList.remove('is-revealed'));
-    }
-
     page.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'auto' });
-
-    if (isRevisit) {
-      window.requestAnimationFrame(() => {
-        pageReveals.forEach((element) => {
-          const bounds = element.getBoundingClientRect();
-          const isImmediateHomeElement = element.matches('.hero-overlay > *, .home-feature');
-          if ((bounds.top < window.innerHeight * .92 && bounds.bottom > 0) || isImmediateHomeElement) {
-            element.classList.add('is-revealed');
-          }
-        });
-        window.setTimeout(() => page.classList.remove('page-reentering'), 900);
-      });
-    }
   }
 
   const quickActions = document.querySelector('.quick-actions');
   if (quickActions) {
     quickActions.classList.toggle('is-home-page', page?.id === 'home');
   }
-
-  hasShownInitialPage = true;
 }
 
 window.addEventListener('hashchange', showPage);
@@ -284,50 +260,3 @@ if (homeSlideshowImage) {
     }, 220);
   }, 2000);
 }
-
-const revealTargets = document.querySelectorAll([
-  '.hero-overlay > *',
-  '#home > section:not(.hero)',
-  '#about > *',
-  '#committees > *',
-  '.committee-page > *',
-  '#resources > *',
-  '#team > :not(.team-waves):not(.team-contours)',
-  '#contact > *',
-  '.chair-profile img',
-  '.chair-profile > div',
-  '.topics-block li',
-  '.chair-report .report-card',
-  '#team .team-card'
-].join(','));
-
-revealTargets.forEach((element, index) => {
-  element.classList.add('scroll-reveal');
-  element.style.setProperty('--reveal-delay', `${(index % 4) * 55}ms`);
-});
-
-window.requestAnimationFrame(() => {
-  document.documentElement.classList.add('scroll-reveals-armed');
-});
-
-if ('IntersectionObserver' in window) {
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const isImmediateHomeElement = entry.target.matches('.hero-overlay > *, .home-feature');
-      const homeIsActive = document.getElementById('home')?.classList.contains('active');
-      if (entry.isIntersecting || (isImmediateHomeElement && homeIsActive)) {
-        entry.target.classList.add('is-revealed');
-      }
-    });
-  }, { threshold: 0.08, rootMargin: '0px 0px -28%' });
-
-  revealTargets.forEach((element) => revealObserver.observe(element));
-} else {
-  revealTargets.forEach((element) => element.classList.add('is-revealed'));
-}
-
-window.requestAnimationFrame(() => {
-  document.querySelectorAll('#home.active .hero-overlay > *, #home.active .home-feature').forEach((element) => {
-    element.classList.add('is-revealed');
-  });
-});
