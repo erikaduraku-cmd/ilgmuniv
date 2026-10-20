@@ -1826,9 +1826,9 @@ body.modal-lock {
   font-size: clamp(30px, 4vw, 44px);
 }
 
-#security-council > .chair-intro::before,
-#security-council > .chair-intro:first-of-type::before,
-#security-council > .chair-intro:nth-of-type(2)::before {
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro::before,
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro:first-of-type::before,
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro:nth-of-type(2)::before {
   display: none;
   content: none;
 }
@@ -1885,14 +1885,14 @@ body.modal-lock {
 
 #team .secretariat-grid .team-card { border-top-color: #aa98b6; }
 
-#security-council > .chair-intro {
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro {
   width: calc(50% - 8px);
   border: 1px solid rgba(11,64,60,.12);
   border-radius: 20px 5px 5px 20px;
   background: #fffdf8;
 }
 
-#security-council > .chair-intro + .chair-intro {
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro + .chair-intro {
   margin-left: 16px;
   border-color: rgba(11,64,60,.12);
   border-radius: 5px 20px 20px 5px;
@@ -1900,8 +1900,8 @@ body.modal-lock {
 }
 
 @media (max-width: 760px) {
-  #security-council > .chair-intro,
-  #security-council > .chair-intro + .chair-intro {
+  :is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro,
+  :is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro + .chair-intro {
     width: 100%;
     margin-left: 0;
     border-radius: 18px;
@@ -1941,7 +1941,7 @@ body.modal-lock {
 .committee-card-level, .committee-card-action { color:#147d77; }
 .committee-browser .committee-card h2 { color:#0b403c; }
 .committee-browser .committee-card p { color:#35534f; }
-.committee-page > .chair-intro, #security-council > .chair-intro, #security-council > .chair-intro + .chair-intro { border:1px solid rgba(11,64,60,.12); background:#fffdf8; box-shadow:0 10px 26px rgba(11,64,60,.06); }
+.committee-page > .chair-intro, :is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro, :is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro + .chair-intro { border:1px solid rgba(11,64,60,.12); background:#fffdf8; box-shadow:0 10px 26px rgba(11,64,60,.06); }
 .topics-block { background:transparent; }
 .topics-block li { min-height:180px; border:1px solid rgba(11,64,60,.12); border-radius:12px; background:#fffdf8; box-shadow:none; }
 .topics-block li::before { content:"Topic " counter(topic); padding:7px 11px; border-radius:999px; background:#147d77; color:#fffdf8; font:800 11px/1 var(--sans); letter-spacing:.06em; text-transform:uppercase; }
@@ -2016,8 +2016,8 @@ body.modal-lock {
 .committee-browser .committee-card p { color: #35534f; }
 
 .committee-page > .chair-intro,
-#security-council > .chair-intro,
-#security-council > .chair-intro + .chair-intro {
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro,
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro + .chair-intro {
   border: 1px solid rgba(11, 64, 60, .12);
   border-top: 1px solid rgba(11, 64, 60, .12);
   background: #fffdf8;
@@ -2310,17 +2310,17 @@ nav button:hover { background-color: #16877f; }
   text-align: left;
 }
 
-#security-council > .chair-intro,
-#security-council > .chair-intro + .chair-intro {
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro,
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro + .chair-intro {
   border-radius: 18px;
 }
 
-#security-council > .chair-intro .chair-profile {
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro .chair-profile {
   grid-template-columns: 190px minmax(0, 1fr);
   gap: 20px;
 }
 
-#security-council > .chair-intro .chair-profile img {
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro .chair-profile img {
   width: 190px;
   height: 190px;
   margin: 0;
@@ -2334,11 +2334,11 @@ footer .social-icon-link img {
 }
 
 @media (max-width: 940px) {
-  #security-council > .chair-intro .chair-profile {
+  :is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro .chair-profile {
     grid-template-columns: 1fr;
   }
 
-  #security-council > .chair-intro .chair-profile img {
+  :is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro .chair-profile img {
     margin: 0 auto 16px;
   }
 }
@@ -2462,9 +2462,9 @@ footer .social-icon-link img {
   font-size: clamp(30px, 4vw, 44px);
 }
 
-#security-council > .chair-intro::before,
-#security-council > .chair-intro:first-of-type::before,
-#security-council > .chair-intro:nth-of-type(2)::before {
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro::before,
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro:first-of-type::before,
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro:nth-of-type(2)::before {
   display: none;
   content: none;
 }
@@ -2527,7 +2527,7 @@ body { background: #f7f1e8; }
   max-width: none;
 }
 
-#security-council > .chair-intro {
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro {
   width: calc(50% - 8px);
   margin-top: 32px;
   padding: clamp(24px, 3vw, 36px);
@@ -2536,18 +2536,18 @@ body { background: #f7f1e8; }
   background: #fffdf8;
 }
 
-#security-council > .chair-intro + .chair-intro {
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro + .chair-intro {
   margin-left: 16px;
   border-top-color: #b4a5bf;
   border-radius: 4px 20px 20px 4px;
   background: linear-gradient(145deg, #fffdf8, #f2edf4);
 }
 
-#security-council > .chair-intro:first-of-type::before {
-  content: "Meet your chairs · United Nations Security Council";
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro:first-of-type::before {
+  content: "Meet your chairs";
 }
 
-#security-council > .chair-intro:nth-of-type(2)::before { content: "Co-chair"; }
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro:nth-of-type(2)::before { content: "Co-chair"; }
 
 .topics-block {
   padding: clamp(28px, 4vw, 52px) 0;
@@ -2626,8 +2626,8 @@ body { background: #f7f1e8; }
 #team .secretariat-grid .team-card { background: #fffdf8; }
 
 @media (max-width: 760px) {
-  #security-council > .chair-intro,
-  #security-council > .chair-intro + .chair-intro {
+  :is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro,
+  :is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro + .chair-intro {
     width: 100%;
     margin-left: 0;
     border-radius: 18px;
@@ -4209,16 +4209,16 @@ footer .social-icon-link img,
   text-transform: uppercase;
 }
 
-#security-council > .chair-intro {
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro {
   width: calc(50% - 10px);
   display: inline-block;
   vertical-align: top;
 }
 
-#security-council > .chair-intro + .chair-intro { margin-left: 20px; }
-#security-council > .chair-intro::before { content: none; display: none; }
-#security-council > .chair-intro .chair-profile { grid-template-columns: 1fr; }
-#security-council > .chair-intro .chair-profile img { width: 180px; margin: 0 auto 18px; }
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro + .chair-intro { margin-left: 20px; }
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro::before { content: none; display: none; }
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro .chair-profile { grid-template-columns: 1fr; }
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro .chair-profile img { width: 180px; margin: 0 auto 18px; }
 
 .committee-brief {
   border: 0;
@@ -4256,8 +4256,8 @@ footer .social-icon-link img,
   .resource-grid { grid-template-columns: 1fr; }
   .committee-browser .committee-card { grid-template-columns: 86px minmax(0, 1fr); }
   .committee-browser .committee-card img { width: 76px; height: 76px; }
-  #security-council > .chair-intro { width: 100%; display: block; }
-  #security-council > .chair-intro + .chair-intro { margin-left: 0; }
+  :is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro { width: 100%; display: block; }
+  :is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro + .chair-intro { margin-left: 0; }
 }
 
 .committee-browser .committee-card,
@@ -4450,14 +4450,14 @@ nav a:hover, nav button:hover { background-color:transparent; }
   display: none;
 }
 
-#security-council > .chair-intro {
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro {
   width: calc(50% - 8px);
   border-top: 3px solid #9eaf91;
   border-radius: 20px 5px 5px 20px;
   background: #fffdf8;
 }
 
-#security-council > .chair-intro + .chair-intro {
+:is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro + .chair-intro {
   margin-left: 16px;
   border-top-color: #aa98b6;
   border-radius: 5px 20px 20px 5px;
@@ -4465,8 +4465,8 @@ nav a:hover, nav button:hover { background-color:transparent; }
 }
 
 @media (max-width: 760px) {
-  #security-council > .chair-intro,
-  #security-council > .chair-intro + .chair-intro {
+  :is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro,
+  :is(#security-council, #unhrc, #ecosoc, #disec) > .chair-intro + .chair-intro {
     width: 100%;
     margin-left: 0;
     border-radius: 18px;
