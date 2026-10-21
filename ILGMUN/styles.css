@@ -5598,9 +5598,3 @@ footer .social-icon-link img,
     width: calc((100% - 24px) / 4);
   }
 }
-
-/* Additional committee co-chairs share a centered roster row. */
-#team .team-row-cochairs { gap: clamp(18px, 3vw, 44px); }
-@media (max-width: 700px) {
-  #team .team-row-cochairs { gap: 8px; }
-}
