@@ -5051,13 +5051,8 @@ body:has(#home.active) .quick-actions {
 
 .home-feature-photo img {
   filter: saturate(.88) contrast(1.04) brightness(.96) sepia(.05);
-  transition: opacity .15s ease, transform .3s ease;
 }
 
-.home-feature-photo img.is-changing {
-  opacity: 0;
-  transform: scale(1.015);
-}
 
 .latest-updates a strong {
   color: #0b403c;
