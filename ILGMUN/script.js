@@ -230,33 +230,51 @@ document.addEventListener('keydown', (event) => {
 
 const homeSlideshowImage = document.getElementById('home-slideshow-image');
 const homeSlideshowSlides = [
-  '/home-slides/01.png',
-  '/home-slides/02.png',
-  '/home-slides/03.png',
-  '/home-slides/04.png',
-  '/home-slides/05.png',
-  '/home-slides/06.png',
-  '/home-slides/07.png'
+  new URL('./assets/home-slide-01.png', import.meta.url).href,
+  new URL('./assets/home-slide-02.png', import.meta.url).href,
+  new URL('./assets/home-slide-03.png', import.meta.url).href,
+  new URL('./assets/home-slide-04.png', import.meta.url).href,
+  new URL('./assets/home-slide-05.png', import.meta.url).href,
+  new URL('./assets/home-slide-06.png', import.meta.url).href,
+  new URL('./assets/home-slide-07.png', import.meta.url).href
 ];
 
 if (homeSlideshowImage) {
   let slideQueue = [];
 
   const refillSlideQueue = () => {
-    slideQueue = [...homeSlideshowSlides];
+    slideQueue = homeSlideshowSlides.filter((src) => src !== homeSlideshowImage.src);
     for (let index = slideQueue.length - 1; index > 0; index -= 1) {
       const randomIndex = Math.floor(Math.random() * (index + 1));
       [slideQueue[index], slideQueue[randomIndex]] = [slideQueue[randomIndex], slideQueue[index]];
     }
   };
 
-  refillSlideQueue();
-  window.setInterval(() => {
+  const advanceSlide = async () => {
+    if (document.hidden || !document.getElementById('home')?.classList.contains('active')) {
+      window.setTimeout(advanceSlide, 5000);
+      return;
+    }
     if (!slideQueue.length) refillSlideQueue();
-    homeSlideshowImage.classList.add('is-changing');
-    window.setTimeout(() => {
-      homeSlideshowImage.src = slideQueue.shift();
+    const nextSource = slideQueue.shift();
+    const nextImage = new Image();
+    try {
+      await new Promise((resolve, reject) => {
+        nextImage.onload = resolve;
+        nextImage.onerror = reject;
+        nextImage.src = nextSource;
+      });
+      await nextImage.decode();
+      homeSlideshowImage.classList.add('is-changing');
+      await new Promise((resolve) => window.setTimeout(resolve, 440));
+      homeSlideshowImage.src = nextSource;
       homeSlideshowImage.classList.remove('is-changing');
-    }, 220);
-  }, 2000);
+    } catch {
+      // Keep the current photo visible when the next image cannot load.
+      homeSlideshowImage.classList.remove('is-changing');
+    }
+    window.setTimeout(advanceSlide, 5000);
+  };
+
+  window.setTimeout(advanceSlide, 5000);
 }
