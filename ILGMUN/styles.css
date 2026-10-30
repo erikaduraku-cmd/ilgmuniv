@@ -5051,7 +5051,7 @@ body:has(#home.active) .quick-actions {
 
 .home-feature-photo img {
   filter: saturate(.88) contrast(1.04) brightness(.96) sepia(.05);
-  transition: opacity .44s ease, transform .7s ease;
+  transition: opacity .15s ease, transform .3s ease;
 }
 
 .home-feature-photo img.is-changing {

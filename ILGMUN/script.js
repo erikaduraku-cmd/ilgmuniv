@@ -252,7 +252,7 @@ if (homeSlideshowImage) {
 
   const advanceSlide = async () => {
     if (document.hidden || !document.getElementById('home')?.classList.contains('active')) {
-      window.setTimeout(advanceSlide, 5000);
+      window.setTimeout(advanceSlide, 2000);
       return;
     }
     if (!slideQueue.length) refillSlideQueue();
@@ -266,15 +266,15 @@ if (homeSlideshowImage) {
       });
       await nextImage.decode();
       homeSlideshowImage.classList.add('is-changing');
-      await new Promise((resolve) => window.setTimeout(resolve, 440));
+      await new Promise((resolve) => window.setTimeout(resolve, 150));
       homeSlideshowImage.src = nextSource;
       homeSlideshowImage.classList.remove('is-changing');
     } catch {
       // Keep the current photo visible when the next image cannot load.
       homeSlideshowImage.classList.remove('is-changing');
     }
-    window.setTimeout(advanceSlide, 5000);
+    window.setTimeout(advanceSlide, 2000);
   };
 
-  window.setTimeout(advanceSlide, 5000);
+  window.setTimeout(advanceSlide, 2000);
 }
