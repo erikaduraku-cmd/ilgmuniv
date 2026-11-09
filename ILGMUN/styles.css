@@ -5595,9 +5595,3 @@ footer .social-icon-link img,
 }
 
 #unodc .chair-profile img[alt="Klea Gashi"] { object-position: 50% 50%; }
-
-#ecosoc > .chair-intro + .chair-intro + .chair-intro {
-  display: block;
-  margin-inline: auto;
-  border-radius: 18px;
-}
